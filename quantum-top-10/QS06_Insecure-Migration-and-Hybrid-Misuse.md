@@ -30,15 +30,16 @@ Scenario #2: A team builds a custom hybrid KEM that derives the session key from
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13 against authoritative canonical sources. -->
 
 1. [NIST FIPS 203 (ML-KEM)](https://csrc.nist.gov/pubs/fips/203/final) and [FIPS 204 (ML-DSA)](https://csrc.nist.gov/pubs/fips/204/final): Standardised PQC primitives for hybrid use.
-2. [IETF - Hybrid PQ Key Exchange in TLS 1.3 (draft)](https://datatracker.ietf.org/wg/tls/about/): Standard hybrid KEM construction.
+2. [IETF - Hybrid key exchange in TLS 1.3 (draft-ietf-tls-hybrid-design)](https://datatracker.ietf.org/doc/draft-ietf-tls-hybrid-design/): Standard hybrid KEM construction.
 3. [IETF PQUIP Working Group](https://datatracker.ietf.org/wg/pquip/about/): Hybrid construction, downgrade resistance, and migration patterns.
-4. [EU Coordinated Implementation Roadmap for PQC](https://digital-strategy.ec.europa.eu/): End-2030 standalone-classical prohibition for high-risk cases (hybrid as interim).
+4. [EU Coordinated Implementation Roadmap for PQC](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography): End-2030 standalone-classical prohibition for high-risk cases (hybrid as interim).
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: NIST FIPS 203, FIPS 204. NCSC guidance treats hybrid as interim. EU Coordinated Implementation Roadmap end-2030 standalone-classical prohibition for high-risk cases. NIS2 Article 21(2)(h) state-of-the-art cryptography obligation, which supervisors increasingly read as requiring correctly-constructed hybrid during transition. DORA Article 9 confidentiality and integrity obligations apply to financial entities deploying hybrid TLS in production. IETF drafts on Hybrid PQ Key Exchange in TLS 1.3 and on Composite ML-DSA. IETF PQUIP working group migration documents.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+NIST FIPS 203, FIPS 204. NCSC guidance treats hybrid as interim. EU Coordinated Implementation Roadmap end-2030 standalone-classical prohibition for high-risk cases. NIS2 Article 21(2)(h) state-of-the-art cryptography obligation, which supervisors increasingly read as requiring correctly-constructed hybrid during transition. DORA Article 9 confidentiality and integrity obligations apply to financial entities deploying hybrid TLS in production. IETF drafts on Hybrid PQ Key Exchange in TLS 1.3 and on Composite ML-DSA. IETF PQUIP working group migration documents.
 

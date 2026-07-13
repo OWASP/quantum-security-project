@@ -27,15 +27,16 @@ Scenario #2: A vendor issues software releases signed with ECDSA, with signature
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13 against authoritative canonical sources. -->
 
 1. [NIST IR 8547 (Draft) - Transition to Post-Quantum Cryptography Standards](https://csrc.nist.gov/pubs/ir/8547/ipd): Transition planning guidance referencing Mosca's inequality.
-2. [UK NCSC migration guidance](https://www.ncsc.gov.uk/): Long-lived data prioritisation for PQC migration.
-3. [EU Coordinated Implementation Roadmap for PQC (June 2025)](https://digital-strategy.ec.europa.eu/): End-2030 high-risk deadline and standalone-PKC prohibition.
-4. [EU Cyber Resilience Act - Regulation (EU) 2024/2847, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj): State-of-the-art protection required through the product support period.
+2. [UK NCSC - Next steps in preparing for post-quantum cryptography](https://www.ncsc.gov.uk/paper/next-steps-in-preparing-for-post-quantum-cryptography): Long-lived data prioritisation for PQC migration.
+3. [EU Coordinated Implementation Roadmap for PQC (June 2025)](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography): End-2030 high-risk deadline and standalone-PKC prohibition.
+4. [EU Cyber Resilience Act - Regulation (EU) 2024/2847, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng): State-of-the-art protection required through the product support period.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: NIST IR 8547 (Draft) on transition planning. NCSC migration guidance on long-lived data prioritisation. EU Coordinated Implementation Roadmap end-2030 high-risk deadline; explicit prohibition on standalone quantum-vulnerable PKC for high-risk cases after 2030. CRA Annex I requires state-of-the-art protection through the support period, which for many products extends past 2030.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+NIST IR 8547 (Draft) on transition planning. NCSC migration guidance on long-lived data prioritisation. EU Coordinated Implementation Roadmap end-2030 high-risk deadline; explicit prohibition on standalone quantum-vulnerable PKC for high-risk cases after 2030. CRA Annex I requires state-of-the-art protection through the support period, which for many products extends past 2030.
 

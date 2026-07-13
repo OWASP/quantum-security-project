@@ -28,16 +28,17 @@ Scenario #2: An adversary alters a hardware configuration file to disable a circ
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13. Academic titles/DOIs corrected; note #1 is a countermeasure paper that establishes the compiler IP-theft threat, and #2's real title concerns quantum neural networks (trigger is via compiler config files). -->
 
-1. [Suresh et al. - Circuit theft via compromised quantum compilers (HASP 2021)](https://dl.acm.org/): Compiler-based circuit-theft attack.
-2. [Chu et al. - QTrojan: stealthy data-encoding disablement via hardware configuration manipulation (2023)](https://arxiv.org/): QTrojan attack.
+1. [Suresh et al. - Short Paper: A Quantum Circuit Obfuscation Methodology for Security and Privacy (HASP 2021)](https://doi.org/10.1145/3505253.3505260): Establishes the untrusted-compiler circuit-IP-theft threat and proposes an obfuscation countermeasure.
+2. [Chu et al. - QTrojan: A Circuit Backdoor Against Quantum Neural Networks (IEEE ICASSP 2023)](https://doi.org/10.1109/ICASSP49357.2023.10096293): Backdoor triggered via quantum-compiler configuration files ([arXiv:2302.08090](https://arxiv.org/abs/2302.08090)).
 3. [SLSA - Supply-chain Levels for Software Artifacts](https://slsa.dev/): Supply-chain integrity framework applicable in spirit.
-4. [EU DORA - Regulation (EU) 2022/2554, Articles 28-44](https://eur-lex.europa.eu/eli/reg/2022/2554/oj): Third-party ICT risk obligations extending to provider toolchain integrity.
-5. [EU Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj): State-of-the-art integrity and authenticity for quantum software products.
+4. [EU DORA - Regulation (EU) 2022/2554, Articles 28-44](https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng): Third-party ICT risk obligations extending to provider toolchain integrity.
+5. [EU Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng): State-of-the-art integrity and authenticity for quantum software products.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: No formal standard yet covers quantum toolchain integrity directly. The relevant published research includes Suresh et al. on circuit-theft attacks (HASP 2021) and Chu et al. on QTrojan (2023). General software supply chain frameworks - SLSA, Sigstore, CISA Secure Software Development Framework - apply in spirit but have not been adapted to quantum stacks. Where regulated entities consume quantum platform services, DORA Articles 28-44 third-party ICT risk obligations extend to the toolchain integrity of those providers. EU CRA Annex I state-of-the-art integrity and authenticity requirements apply to quantum software products placed on the EU market.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+No formal standard yet covers quantum toolchain integrity directly. The relevant published research includes Suresh et al. on circuit-theft attacks (HASP 2021) and Chu et al. on QTrojan (2023). General software supply chain frameworks - SLSA, Sigstore, CISA Secure Software Development Framework - apply in spirit but have not been adapted to quantum stacks. Where regulated entities consume quantum platform services, DORA Articles 28-44 third-party ICT risk obligations extend to the toolchain integrity of those providers. EU CRA Annex I state-of-the-art integrity and authenticity requirements apply to quantum software products placed on the EU market.
 

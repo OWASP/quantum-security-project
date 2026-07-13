@@ -27,16 +27,17 @@ Scenario #2: An organisation attempts to migrate smart cards to ML-DSA but disco
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13 against authoritative canonical sources. -->
 
-1. [UK NCSC - Timelines for migration to post-quantum cryptography](https://www.ncsc.gov.uk/): Identifies TPM, X.509 PKI, UEFI Secure Boot, and 6G as needing new PQC standards by 2028.
-2. [NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)](https://www.nsa.gov/): Niche equipment and constrained devices CNSA 2.0 by 2033.
+1. [UK NCSC - Timelines for migration to post-quantum cryptography](https://www.ncsc.gov.uk/guidance/pqc-migration-timelines): Identifies TPM, X.509 PKI, UEFI Secure Boot, and 6G as needing new PQC standards by 2028.
+2. [NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3148990/nsa-releases-future-quantum-resistant-qr-algorithm-requirements-for-national-se/): Niche equipment and constrained devices CNSA 2.0 by 2033.
 3. [Trusted Computing Group](https://trustedcomputinggroup.org/): Work on PQC TPM specifications.
-4. [EU Cyber Resilience Act, Annex IV](https://eur-lex.europa.eu/eli/reg/2024/2847/oj): Critical product categories including smart-card and smart-meter gateways.
+4. [EU Cyber Resilience Act, Annex IV](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng): Critical product categories including smart-card and smart-meter gateways.
 5. [IETF LAMPS Working Group](https://datatracker.ietf.org/wg/lamps/about/): PQC X.509 profiles.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: NCSC Timelines for migration explicitly identifies hardware roots of trust. NSA CNSA 2.0: niche equipment and constrained devices CNSA 2.0 by 2033. IETF LAMPS for X.509 PQC. Trusted Computing Group work on PQC TPM specifications. UEFI Forum Secure Boot evolution. EU CRA Annex IV critical product categories (smart meter gateways, smart cards). 3GPP work on PQC for 6G and post-5G cellular.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+NCSC Timelines for migration explicitly identifies hardware roots of trust. NSA CNSA 2.0: niche equipment and constrained devices CNSA 2.0 by 2033. IETF LAMPS for X.509 PQC. Trusted Computing Group work on PQC TPM specifications. UEFI Forum Secure Boot evolution. EU CRA Annex IV critical product categories (smart meter gateways, smart cards). 3GPP work on PQC for 6G and post-5G cellular.
 

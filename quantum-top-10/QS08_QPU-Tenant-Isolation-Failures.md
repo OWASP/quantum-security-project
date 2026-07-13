@@ -21,21 +21,22 @@ Cloud-based quantum platforms increasingly host workloads from multiple tenants 
 
 **Example Attack Scenarios:**
 
-Scenario #1: A financial firm runs a proprietary optimisation circuit on a shared QPU. A malicious co-tenant schedules a circuit adjacent on the QPU topology and uses quantum crosstalk to degrade the victim's fidelity (Choudhury et al., NDSS 2025; Ash-Saki et al., ISLPED 2020), corrupting results the firm relies on - without ever needing co-execution.
+Scenario #1: A financial firm runs a proprietary optimisation circuit on a shared QPU. A malicious co-tenant schedules a circuit adjacent on the QPU topology and uses quantum crosstalk to degrade the victim's fidelity (Li et al., NDSS 2025; Ash-Saki et al., ISLPED 2020), corrupting results the firm relies on - without ever needing co-execution.
 
 Scenario #2: A tenant's circuit is scheduled on physical qubits immediately after a competitor's workload. Because standard reset gates do not fully clear state (Xu et al., CCS 2023), the tenant observes residual state leaking information about the previous, confidential computation.
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13. Academic citations corrected to real papers; "Choudhury et al." was a mis-citation and is corrected to Li et al. (see #1). -->
 
-1. [Choudhury et al. - Quantum crosstalk attacks on multi-tenant quantum systems (NDSS 2025)](https://www.ndss-symposium.org/): Demonstrated crosstalk fidelity-degradation attack.
-2. [Ash-Saki et al. - Crosstalk-based fault injection in NISQ-era quantum systems (ISLPED 2020)](https://dl.acm.org/): Crosstalk fault injection.
-3. [Xu et al. - Reset-gate state leakage and power side-channel attacks on quantum controllers (CCS 2023)](https://dl.acm.org/doi/proceedings/10.1145/3576915): Reset-gate state leakage across tenant boundary.
-4. [EU DORA - Regulation (EU) 2022/2554, Article 28](https://eur-lex.europa.eu/eli/reg/2022/2554/oj): Third-party ICT risk expectation that platform claims are evidenced.
+1. [Li et al. - Crosstalk-induced Side Channel Threats in Multi-Tenant NISQ Computers (NDSS 2025)](https://www.ndss-symposium.org/ndss-paper/crosstalk-induced-side-channel-threats-in-multi-tenant-nisq-computers/): Demonstrated crosstalk-based side-channel/fidelity attack on shared QPUs. (Corrects the earlier "Choudhury et al." mis-citation; arXiv:2412.10507.)
+2. [Ash-Saki et al. - Analysis of Crosstalk in NISQ Devices and Security Implications in Multi-Programming Regime (ISLPED 2020)](https://doi.org/10.1145/3370748.3406570): Crosstalk-based fault injection.
+3. [Xu et al. - Securing NISQ Quantum Computer Reset Operations Against Higher Energy State Attacks (CCS 2023)](https://doi.org/10.1145/3576915.3623104): Documents reset-operation state leakage across the tenant boundary.
+4. [EU DORA - Regulation (EU) 2022/2554, Article 28](https://eur-lex.europa.eu/eli/reg/2022/2554/oj/eng): Third-party ICT risk expectation that platform claims are evidenced.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: No formal standard yet covers QPU tenant isolation. NIST and NCSC have not published guidance on quantum platform security. The relevant published research includes Choudhury et al. on quantum crosstalk attacks (NDSS 2025), Ash-Saki et al. on crosstalk-based fault injection (ISLPED 2020), and Xu et al. on reset-gate state leakage (CCS 2023). Where DORA Article 28 third-party risk applies to financial entities using quantum platform services, the supervisory expectation is that platform security claims are evidenced rather than assumed.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+No formal standard yet covers QPU tenant isolation. NIST and NCSC have not published guidance on quantum platform security. The relevant published research includes Li et al. on crosstalk-induced side-channel threats (NDSS 2025), Ash-Saki et al. on crosstalk-based fault injection (ISLPED 2020), and Xu et al. on reset-operation state leakage (CCS 2023). Where DORA Article 28 third-party risk applies to financial entities using quantum platform services, the supervisory expectation is that platform security claims are evidenced rather than assumed.
 

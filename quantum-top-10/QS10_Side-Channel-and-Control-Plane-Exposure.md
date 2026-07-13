@@ -29,15 +29,16 @@ Scenario #2: Power-consumption traces are captured from the controllers driving 
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13. Academic titles/DOIs corrected; #1 is a defense paper documenting reset-operation state leakage, #2 is a distinct CCS 2023 paper from the reset-operations one cited in QS08. -->
 
-1. [Mi et al. - Timing side channels in quantum reset operations (CCS 2022)](https://dl.acm.org/doi/proceedings/10.1145/3548606): Timing side channel revealing program execution patterns.
-2. [Xu et al. - Power side-channel attacks on quantum controllers (CCS 2023)](https://dl.acm.org/doi/proceedings/10.1145/3576915): Gate-level circuit reverse-engineering via power traces.
+1. [Mi et al. - Securing Reset Operations in NISQ Quantum Computers (CCS 2022)](https://doi.org/10.1145/3548606.3559380): Documents reset-operation state leakage / timing exposure across tenants.
+2. [Xu et al. - Exploration of Power Side-Channel Vulnerabilities in Quantum Computer Controllers (CCS 2023)](https://doi.org/10.1145/3576915.3623118): Gate-level circuit reverse-engineering via power traces.
 3. [NIST FIPS 140-3 - Security Requirements for Cryptographic Modules](https://csrc.nist.gov/pubs/fips/140-3/final): Classical physical-security framework offering partial conceptual coverage.
 4. [Common Criteria (ISO/IEC 15408)](https://www.commoncriteriaportal.org/): Side-channel evaluation concepts not yet adapted to quantum control infrastructure.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: No formal standard yet covers quantum platform side channels. The relevant published research includes Mi et al. on timing side channels (CCS 2022) and Xu et al. on power side-channel attacks (CCS 2023). General classical side-channel frameworks (FIPS 140-3 physical security requirements, Common Criteria) provide partial conceptual coverage but have not been adapted to quantum control infrastructure.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+No formal standard yet covers quantum platform side channels. The relevant published research includes Mi et al. on timing side channels (CCS 2022) and Xu et al. on power side-channel attacks (CCS 2023). General classical side-channel frameworks (FIPS 140-3 physical security requirements, Common Criteria) provide partial conceptual coverage but have not been adapted to quantum control infrastructure.
 

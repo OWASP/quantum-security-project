@@ -29,16 +29,17 @@ Scenario #2: A team adds a crypto abstraction layer but never tests rotation. Wh
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13 against authoritative canonical sources. NCSC has no standalone crypto-agility page; the PQC migration timelines page is the appropriate anchor. -->
 
 1. [CISA, NSA, NIST - Quantum-Readiness fact sheet](https://www.cisa.gov/resources-tools/resources/quantum-readiness-migration-post-quantum-cryptography): Cryptographic agility recommendation.
-2. [UK NCSC guidance on crypto-agility](https://www.ncsc.gov.uk/): Agility expectations for migration.
-3. [EU Coordinated Implementation Roadmap for PQC](https://digital-strategy.ec.europa.eu/): Explicit agility expectation.
+2. [UK NCSC - Timelines for migration to post-quantum cryptography](https://www.ncsc.gov.uk/guidance/pqc-migration-timelines): Agility expectations within PQC migration guidance.
+3. [EU Coordinated Implementation Roadmap for PQC](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography): Explicit agility expectation.
 4. [IETF PQUIP Working Group](https://datatracker.ietf.org/wg/pquip/about/): Agility documents and migration patterns.
-5. [IETF TLS Working Group](https://datatracker.ietf.org/wg/tls/about/): Hybrid KEM and signature negotiation.
+5. [IETF - Hybrid key exchange in TLS 1.3 (draft-ietf-tls-hybrid-design)](https://datatracker.ietf.org/doc/draft-ietf-tls-hybrid-design/): Hybrid KEM negotiation.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: CISA, NSA, NIST Quantum-Readiness fact sheet (cryptographic agility recommendation). NCSC guidance on crypto-agility. EU Coordinated Implementation Roadmap explicit agility expectation. NIS2 Article 21(2)(h) implies agility through state-of-the-art and risk-based requirements. IETF PQUIP working group agility documents; IETF TLS working group on hybrid KEM and signature negotiation.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+CISA, NSA, NIST Quantum-Readiness fact sheet (cryptographic agility recommendation). NCSC guidance on crypto-agility. EU Coordinated Implementation Roadmap explicit agility expectation. NIS2 Article 21(2)(h) implies agility through state-of-the-art and risk-based requirements. IETF PQUIP working group agility documents; IETF TLS working group on hybrid KEM and signature negotiation.
 

@@ -27,16 +27,17 @@ Scenario #2: An organisation migrates its leaf TLS certificates to PQC but leave
 
 **Reference Links:**
 
-<!-- REVIEW: reference URLs are best-effort canonical pages and require human verification against the source doc. -->
+<!-- References verified 2026-07-13 against authoritative canonical sources. -->
 
 1. [NIST FIPS 204 (ML-DSA)](https://csrc.nist.gov/pubs/fips/204/final): Module-lattice digital signature standard.
 2. [NIST FIPS 205 (SLH-DSA)](https://csrc.nist.gov/pubs/fips/205/final): Stateless hash-based signature standard for high-assurance, long-lived use.
-3. [NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)](https://www.nsa.gov/): Software and firmware signing exclusively CNSA 2.0 by 2030.
+3. [NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3148990/nsa-releases-future-quantum-resistant-qr-algorithm-requirements-for-national-se/): Software and firmware signing exclusively CNSA 2.0 by 2030.
 4. [IETF LAMPS Working Group](https://datatracker.ietf.org/wg/lamps/about/): PQC X.509 and CMS extensions.
-5. [EU Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj): State-of-the-art integrity and authenticity requirements.
+5. [EU Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng): State-of-the-art integrity and authenticity requirements.
 
-<!-- TODO: The source doc includes a "Standards and regulatory mapping" section not represented in _template.md. Preserved below — decide whether to extend the template to carry it.
+**Standards and Regulatory Mapping:**
 
-Standards and regulatory mapping: NIST FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA). NSA CNSA 2.0: software and firmware signing exclusively CNSA 2.0 by 2030. NCSC recommends ML-DSA-65 for most use cases. EU CRA Annex I requires state-of-the-art mechanisms for integrity and authenticity. IETF LAMPS working group on PQC X.509 and CMS extensions. DORA Articles 28-44 on third-party risk management apply to PKI and signing service vendors.
--->
+> **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+NIST FIPS 204 (ML-DSA), FIPS 205 (SLH-DSA). NSA CNSA 2.0: software and firmware signing exclusively CNSA 2.0 by 2030. NCSC recommends ML-DSA-65 for most use cases. EU CRA Annex I requires state-of-the-art mechanisms for integrity and authenticity. IETF LAMPS working group on PQC X.509 and CMS extensions. DORA Articles 28-44 on third-party risk management apply to PKI and signing service vendors.
 
