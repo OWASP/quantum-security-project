@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/logo.jpg" alt="OWASP Quantum Security Project logo" width="160">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white.png">
+    <img src="assets/logo.png" alt="OWASP Quantum Security Project logo" width="160">
+  </picture>
 </p>
 
 # OWASP Quantum Security Project
