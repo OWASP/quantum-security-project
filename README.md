@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="assets/logo.jpg" alt="OWASP Quantum Security Project logo" width="160">
+</p>
+
 # OWASP Quantum Security Project
 
-**Prepare now. Protect tomorrow.**
+**Prepare Today. Protect tomorrow.**
 
 An official OWASP community project mapping the security risks of the quantum
 era in a practical, vendor-neutral, and risk-based way — the antidote to hype
@@ -109,6 +113,13 @@ Prefer to discuss before writing a change? [Open an issue](https://github.com/OW
 to suggest a candidate risk, flag an error, question the selection or ordering,
 or start a conversation. Issues are the best place for feedback that isn't yet a
 concrete edit.
+
+**Quick submission forms**
+
+During the bootstrap phase you can also contribute via these forms without using GitHub:
+
+- [Top 10 for Quantum Security — candidate risks & feedback](https://forms.gle/8NbEEX6mmiKdUXxXA)
+- [Work Areas & Proposals — propose a topic or working area](https://forms.gle/n7BicJJpQJFQ8eRz7)
 
 ---
 
