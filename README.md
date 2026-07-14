@@ -1,20 +1,22 @@
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white.png">
-    <img src="assets/logo.png" alt="OWASP Quantum Security Project logo" width="160">
-  </picture>
-</p>
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/logo-white.png">
+  <img src="assets/logo.png" alt="OWASP Quantum Security Project logo" width="160">
+</picture>
 
 # OWASP Quantum Security Project
 
 **Prepare Today. Protect tomorrow.**
 
+</div>
+
 An official OWASP community project mapping the security risks of the quantum
-era in a practical, vendor-neutral, and risk-based way — the antidote to hype
+era in a practical, vendor-neutral, and risk-based way - the antidote to hype
 and fear.
 
 > **Status:** Bootstrap phase. The OWASP Top 10 for Quantum Security Risks is at
-> draft **v0.2** and open for community input. It is our starting point, not the
+> draft **v0.1** and open for community input. It is our starting point, not the
 > finished list.
 
 ---
@@ -23,7 +25,7 @@ and fear.
 
 NIST, the UK NCSC, and EU institutions have all issued concrete guidance on
 post-quantum cryptography, crypto-agility, and harvest-now-decrypt-later
-mitigation — while quantum systems themselves move from research into cloud and
+mitigation - while quantum systems themselves move from research into cloud and
 enterprise environments. Yet security teams still face three gaps:
 
 1. **No concise, prioritised view** of quantum security risks.
@@ -32,10 +34,10 @@ enterprise environments. Yet security teams still face three gaps:
 
 This project closes those gaps with work that is:
 
-- **Practical and immediate** — helping defenders act on quantum risk today, not in a decade.
-- **Systematic and risk-based** — mapping the landscape in a structured, prioritised way.
-- **Actionable and grounded** — tied to recognised guidance from NIST, NCSC, and the EU.
-- **One community** — connecting research, industry, and practitioners in a shared effort.
+- **Practical and immediate** - helping defenders act on quantum risk today, not in a decade.
+- **Systematic and risk-based** - mapping the landscape in a structured, prioritised way.
+- **Actionable and grounded** - tied to recognised guidance from NIST, NCSC, and the EU.
+- **One community** - connecting research, industry, and practitioners in a shared effort.
 
 ### Two tracks
 
@@ -59,11 +61,11 @@ are being onboarded as the project matures.
 
 ## The OWASP Top 10 for Quantum Security Risks
 
-Draft v0.2. Each entry lives under [`quantum-top-10/`](quantum-top-10/).
+Draft v0.1. Each entry lives under [`quantum-top-10/`](quantum-top-10/).
 
-QS01–QS07 address the **migration surface** — risks to organisations whose
+QS01-QS07 address the **migration surface** - risks to organisations whose
 existing classical cryptography must be replaced with post-quantum equivalents.
-QS08–QS10 address the **platform surface** — risks to organisations running
+QS08-QS10 address the **platform surface** - risks to organisations running
 workloads on quantum computing platforms.
 
 | ID | Risk | Primary anchor |
@@ -85,9 +87,18 @@ standards-and-regulatory mapping.
 
 ---
 
+## Community calls
+
+The project runs a monthly community call, with additional calls on demand as the
+work picks up. Decks for every call are published in [`calls/`](calls/), starting
+with the project kick-off deck; decks for subsequent calls are added there as they
+happen.
+
+---
+
 ## How to contribute
 
-Feedback and contributions are welcome — this is a community project and the
+Feedback and contributions are welcome - this is a community project and the
 Top 10 is explicitly a draft opened for discussion.
 
 **1. Clone the repository**
@@ -121,8 +132,8 @@ concrete edit.
 
 During the bootstrap phase you can also contribute via these forms without using GitHub:
 
-- [Top 10 for Quantum Security — candidate risks & feedback](https://forms.gle/8NbEEX6mmiKdUXxXA)
-- [Work Areas & Proposals — propose a topic or working area](https://forms.gle/n7BicJJpQJFQ8eRz7)
+- [Top 10 for Quantum Security - candidate risks & feedback](https://forms.gle/8NbEEX6mmiKdUXxXA)
+- [Work Areas & Proposals - propose a topic or working area](https://forms.gle/n7BicJJpQJFQ8eRz7)
 
 ---
 
@@ -130,7 +141,7 @@ During the bootstrap phase you can also contribute via these forms without using
 
 - **Homepage:** [quantum-owasp.org](https://quantum-owasp.org)
 - **GitHub:** [github.com/OWASP/quantum-security-project](https://github.com/OWASP/quantum-security-project)
-- **OWASP Slack:** `#project-quantum-security`
+- **OWASP Slack:** `#project-quantum-security` - [join the OWASP Slack](https://owasp.org/slack/invite)
 - **Email:** contribute@quantum-owasp.org
 
 The project follows OWASP's standard documentation and contribution practices,
