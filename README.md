@@ -142,6 +142,7 @@ During the bootstrap phase you can also contribute via these forms without using
 - **Homepage:** [quantum-owasp.org](https://quantum-owasp.org)
 - **GitHub:** [github.com/OWASP/quantum-security-project](https://github.com/OWASP/quantum-security-project)
 - **OWASP Slack:** `#project-quantum-security` - [join the OWASP Slack](https://owasp.org/slack/invite)
+- **Biweekly community call:** Mondays 17:30-18:30 (London / Europe/London), every two weeks starting **3 August 2026**, on Zoom - [join](https://deepcyberx.zoom.us/j/87321791672?pwd=pDq33o7cwIca0h32amjpOb4vQkSQFk.1) (Meeting ID `873 2179 1672`, passcode `701551`). Add to your calendar: [ICS invite](calls/OWASPQuantumBiweeklyCall.ics).
 - **Email:** contribute@quantum-owasp.org
 
 The project follows OWASP's standard documentation and contribution practices,
