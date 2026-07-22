@@ -57,6 +57,9 @@ The project runs expert-backed and community-driven, with open and transparent
 peer review and project-lead sign-off. Additional working-group and entry leads
 are being onboarded as the project matures.
 
+See the [project charter](charter.md) for the mission, scope, governance, and
+ways of working.
+
 ---
 
 ## The OWASP Top 10 for Quantum Security Risks
@@ -89,10 +92,14 @@ standards-and-regulatory mapping.
 
 ## Community calls
 
-The project runs a monthly community call, with additional calls on demand as the
-work picks up. Decks for every call are published in [`calls/`](calls/), starting
-with the project kick-off deck; decks for subsequent calls are added there as they
-happen.
+The project runs a biweekly community call (Mondays 17:30-18:30 London, starting
+3 August 2026 - see [Community and contact](#community-and-contact) for the Zoom
+and calendar details), with additional calls on demand as the work picks up. Decks
+for every call are published in [`calls/`](calls/), starting with the project
+kick-off deck; decks for subsequent calls are added there as they happen.
+
+The route from the v0.1 draft to a community-validated v1 is laid out in the
+[sprint plan and project timeline](plans/sprint-plan-quantum-top10-2026.md).
 
 ---
 
@@ -142,6 +149,7 @@ During the bootstrap phase you can also contribute via these forms without using
 - **Homepage:** [quantum-owasp.org](https://quantum-owasp.org)
 - **GitHub:** [github.com/OWASP/quantum-security-project](https://github.com/OWASP/quantum-security-project)
 - **OWASP Slack:** `#project-quantum-security` - [join the OWASP Slack](https://owasp.org/slack/invite)
+- **Biweekly community call:** Mondays 17:30-18:30 (London / Europe/London), every two weeks starting **3 August 2026**, on Zoom - [join](https://deepcyberx.zoom.us/j/87321791672?pwd=pDq33o7cwIca0h32amjpOb4vQkSQFk.1) (Meeting ID `873 2179 1672`, passcode `701551`). Add to your calendar: [ICS invite](calls/OWASPQuantumBiweeklyCall.ics).
 - **Email:** contribute@quantum-owasp.org
 
 The project follows OWASP's standard documentation and contribution practices,

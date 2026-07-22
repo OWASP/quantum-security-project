@@ -1,0 +1,65 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Europe/London
+X-LIC-LOCATION:Europe/London
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:GMT+1
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Europe/London:20260803T173000
+DTEND;TZID=Europe/London:20260803T183000
+RRULE:FREQ=WEEKLY;WKST=SU;INTERVAL=2;BYDAY=MO
+DTSTAMP:20260721T112319Z
+ORGANIZER;CN=John Sotiropoulos:mailto:john.sotiropoulos@owasp.org
+UID:6pbv3voqq0jc8a4jemjfgltnr4@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=John Sotiropoulos;X-NUM-GUESTS=0:mailto:john.sotiropoulos@owasp.org
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=john@deepcyber.ai;X-NUM-GUESTS=0:mailto:john@deepcyber.ai
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=Roy Barkay;X-NUM-GUESTS=0:mailto:roy.barkay@owasp.org
+X-MICROSOFT-CDO-OWNERAPPTID:618431907
+CREATED:20260721T112051Z
+DESCRIPTION:<p><br>──────────<br><br>John Sotiropoulos is inviting you to a
+  scheduled Zoom meeting.<br>Join Zoom Meeting<br>https://deepcyberx.zoom.us
+ /j/87321791672?pwd=pDq33o7cwIca0h32amjpOb4vQkSQFk.1<br><br>Meeting agenda<b
+ r>https://docs.zoom.us/agenda/doc/9d2dc494-0c24-45a9-91ca-d1a18689f133?from
+ =chext<br><br>Meeting chat link<br>https://deepcyberx.zoom.us/launch/jc/873
+ 21791672<br><br>View meeting insights<br>https://deepcyberx.zoom.us/launch/
+ edl?muid=9d2dc494-0c24-45a9-91ca-d1a18689f133&amp\;from=chext<br><br>Meetin
+ g ID: 873 2179 1672<br>Passcode: 701551<br><br>---<br><br>One tap mobile<br
+ >+13126266799\,\,87321791672#\,\,\,\,*701551# US (Chicago)<br>+13462487799\
+ ,\,87321791672#\,\,\,\,*701551# US (Houston)<br><br><br>---<br><br>Join by 
+ SIP<br>• 87321791672@zoomcrc.com<br><br>Join instructions<br>https://deepcy
+ berx.zoom.us/meetings/87321791672/invitations?signature=x548_I4vkytbai6T91B
+ Vf3nJP5krSJB9SYFUL5tA_mY<br><br><br><br>──────────</p>
+LAST-MODIFIED:20260721T112307Z
+LOCATION:https://deepcyberx.zoom.us/j/87321791672?pwd=pDq33o7cwIca0h32amjpO
+ b4vQkSQFk.1&jst=3
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:OWASP Quantum Security Project - Biweekly call
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:This is an event reminder
+TRIGGER:-P0DT0H10M0S
+END:VALARM
+END:VEVENT
+END:VCALENDAR
