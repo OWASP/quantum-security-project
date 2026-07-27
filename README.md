@@ -83,7 +83,7 @@ workloads on quantum computing platforms.
 | [QS05](quantum-top-10/QS05_Crypto-Agility-Failures.md) | Crypto-Agility Failures | NIS2 Article 21(2)(h); IETF PQUIP/TLS WG |
 | [QS06](quantum-top-10/QS06_Insecure-Migration-and-Hybrid-Misuse.md) | Insecure Migration and Hybrid Misuse | EU Roadmap end-2030 standalone-classical prohibition |
 | [QS07](quantum-top-10/QS07_Hardware-Roots-of-Trust.md) | Hardware Roots of Trust | NCSC 2028 milestone; CRA Annex IV |
-| [QS08](quantum-top-10/QS08_QPU-Tenant-Isolation-Failures.md) | QPU Tenant Isolation Failures | Li et al. NDSS 2025; Xu et al. CCS 2023 |
+| [QS08](quantum-top-10/QS08_QPU-Tenant-Isolation-Failures.md) | QPU Tenant Isolation Failures | Choudhury et al. NDSS 2025; Xu et al. CCS 2023 |
 | [QS09](quantum-top-10/QS09_Toolchain-and-Compiler-Compromise.md) | Toolchain and Compiler Compromise | Suresh et al. HASP 2021; Chu et al. ICASSP 2023 |
 | [QS10](quantum-top-10/QS10_Side-Channel-and-Control-Plane-Exposure.md) | Side-Channel and Control-Plane Exposure | Mi et al. CCS 2022; Xu et al. CCS 2023 |
 
