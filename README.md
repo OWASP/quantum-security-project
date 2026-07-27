@@ -66,6 +66,9 @@ ways of working.
 
 Draft v0.1. Each entry lives under [`quantum-top-10/`](quantum-top-10/).
 
+The route from the v0.1 draft to a community-validated v1 is laid out in the
+[sprint plan and project timeline](plans/sprint-plan-quantum-top10-2026.md).
+
 QS01-QS07 address the **migration surface** - risks to organisations whose
 existing classical cryptography must be replaced with post-quantum equivalents.
 QS08-QS10 address the **platform surface** - risks to organisations running
@@ -97,9 +100,6 @@ The project runs a biweekly community call (Mondays 17:30-18:30 London, starting
 and calendar details), with additional calls on demand as the work picks up. Decks
 for every call are published in [`calls/`](calls/), starting with the project
 kick-off deck; decks for subsequent calls are added there as they happen.
-
-The route from the v0.1 draft to a community-validated v1 is laid out in the
-[sprint plan and project timeline](plans/sprint-plan-quantum-top10-2026.md).
 
 ---
 
