@@ -1,4 +1,4 @@
-**QSxx:2026 - Unverifiable Computation and Job Provenance**
+## QSxx:2026 - Unverifiable Computation and Job Provenance
 
 > **Proposal status:** New entry submitted during Pre-Sprint 0. Number deliberately left as QSxx - placement and numbering are for Sprint 1 voting to decide. Surface: Platform (quantum platforms and hybrid quantum-classical systems). Maturity: Demonstrated - tampering by untrusted quantum hardware providers and a runtime detection heuristic are shown in peer-reviewed work.
 
