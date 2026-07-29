@@ -85,7 +85,7 @@ workloads on quantum computing platforms.
 | [QS07](quantum-top-10/QS07_Hardware-Roots-of-Trust.md) | Hardware Roots of Trust | NCSC 2028 milestone; CRA Annex IV |
 | [QS08](quantum-top-10/QS08_QPU-Tenant-Isolation-Failures.md) | QPU Tenant Isolation Failures | Li et al. NDSS 2025; Xu et al. CCS 2023 |
 | [QS09](quantum-top-10/QS09_Toolchain-and-Compiler-Compromise.md) | Toolchain and Compiler Compromise | Suresh et al. HASP 2021; Chu et al. ICASSP 2023 |
-| [QS10](quantum-top-10/QS10_Side-Channel-and-Control-Plane-Exposure.md) | Side-Channel and Control-Plane Exposure | Mi et al. CCS 2022; Xu et al. CCS 2023 |
+| [QS10](quantum-top-10/QS10_Side-Channel-and-Control-Plane-Exposure.md) | Side-Channel and Control-Plane Exposure | Xu et al. CCS 2023 |
 
 Each entry follows a common [template](quantum-top-10/_template.md): description,
 common examples, prevention, example attack scenarios, references, and a
