@@ -20,10 +20,12 @@ The underlying authorization and replay principles are not unique to quantum com
 
 This entry concerns the authority state governing an exact logical job. It does not address compromised credentials or control-plane access, substitution or loss of integrity across job transformation and dispatch, or the independent truth of claims about the underlying physical execution and returned result.
 
+The same field can participate in distinct failure conditions. For shot count, this entry asks whether the shot count requested or accepted for execution is within the authorized maximum. Execution-and-result assurance asks whether a provider's claim about the number of shots performed is supported by independently appraisable evidence. Evidence relevant to the second question may reveal a violation of the first, but the authorization predicate and the execution-evidence predicate remain distinct.
+
 **Common Examples of Vulnerability:**
 
 1. A broker retries a quantum job after an acknowledgement timeout using a new downstream request identifier, causing two provider tasks to be accepted even though the principal authorized one logical execution.
-2. A delegated operator has valid platform credentials but changes the approved target device, increases the shot count, or exceeds the approved cost ceiling because the system enforces account-level permission without enforcing a required job-specific authorization record.
+2. A delegated operator has valid platform credentials but changes the approved target device, raises the requested shot count above the authorized maximum, or exceeds the approved cost ceiling because the system enforces account-level permission without enforcing a required job-specific authorization record.
 3. Two dispatch workers concurrently observe the same one-time job authority as unused and both dispatch the workload before either records its consumption.
 4. A broker reports a job as cancelled after recording the tenant's request but without obtaining or preserving the downstream provider's cancellation disposition.
 5. A validity condition is expressly defined against provider acceptance or dispatch but is evaluated only when the tenant first submits the job.
@@ -46,11 +48,11 @@ This entry concerns the authority state governing an exact logical job. It does 
 
 Scenario #1: A broker submits a quantum workload to an underlying provider but times out before receiving an acknowledgement. It retries using a new downstream request identifier. The principal authorized one execution, but deduplication is local to each API boundary and is not associated with the same logical-job identity across the broker-provider chain. Both tasks are accepted, executed, and billed.
 
-Scenario #2: A delegated operator holds valid credentials that permit quantum-task submission. The principal approved one identified workload on Backend A with a maximum shot count and cost ceiling. The operator changes the target to a more expensive device and increases the number of shots. Because the system evaluates account-level permission but does not enforce the required job-specific authorization record, the altered task is accepted despite falling outside the approval.
+Scenario #2: A delegated operator holds valid credentials that permit quantum-task submission. The principal approved one identified workload on Backend A with a maximum shot count and cost ceiling. The operator changes the target to a more expensive device and raises the requested shot count above the approved maximum. Because the system evaluates account-level permission but does not enforce the required job-specific authorization record, the altered task is accepted despite falling outside the approval.
 
 Scenario #3: A one-time job authorization is visible to two dispatch workers. Each checks the shared record before either worker commits a consumption update, and each observes the authority as unused. Both dispatch the workload, resulting in two executions and two charges under authority intended for a single use.
 
-Scenario #4: A tenant requests cancellation of a queued job through a broker. The broker records the request as effective and reports the job as cancelled without obtaining the downstream provider's disposition. The provider had already accepted the job and later executes it. The failure is not that cancellation became too late; it is that an unconfirmed request was represented as an effective cancellation and the downstream authority state was lost.
+Scenario #4: A tenant requests cancellation of a queued job through a broker. The broker records the request as effective and reports the job as cancelled without obtaining the downstream provider's disposition. The provider had already accepted the job and later executes it. The failure is not that cancellation became too late; it is that an unconfirmed request was represented as an effective cancellation and the downstream cancellation disposition was neither confirmed nor preserved.
 
 **Reference Links:**
 
