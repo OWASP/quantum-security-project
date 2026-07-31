@@ -17,6 +17,8 @@ Adversaries are already capturing encrypted traffic and stored ciphertext today,
 2. For data at rest, layer a PQC-protected encryption envelope over existing classical encryption for the highest-sensitivity datasets.
 3. Rotate symmetric data keys protected by quantum-vulnerable wrapping more frequently to reduce the volume exposed by any single recovered key.
 4. Reduce data retention where the business case allows - data not retained cannot be decrypted later.
+5. Physically or logically isolate critical data to prevent eavesdropping.
+6. Implement an allowed quantum protection mechanism, such as quantum cryptography, quantum networking, quantum key distribution, etc.
 
 **Example Attack Scenarios:**
 
