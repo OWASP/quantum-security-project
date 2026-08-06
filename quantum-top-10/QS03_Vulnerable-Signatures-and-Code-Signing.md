@@ -18,6 +18,7 @@ Public-key signatures underpin code signing, supply-chain integrity, document va
 3. Use ML-DSA (FIPS 204) for general digital signatures; use SLH-DSA (FIPS 205) for very long-lived, high-assurance signatures where stateless hash-based security is preferred.
 4. Plan for shorter certificate lifetimes during transition (e.g. the CA/Browser Forum 47-day TLS maximum effective 2029) to reduce the exposure window.
 5. Engage PKI, code-signing, and certificate-authority vendors on PQC roadmaps - failure here is a supply-chain blocker.
+6. For firmware and software signing specifically, CNSA 2.0 lists LMS and XMSS (NIST SP 800-208) as the approved stateful hash-based schemes, and does not approve SLH-DSA for NSS use (SLH-DSA remains valid per FIPS 205 outside that scope - item 3 above still applies generally). ML-DSA is also CNSA 2.0-approved for this use case and may suit setups needing more signatures than a single LMS/XMSS key can produce, or distributed signing. LMS and XMSS are stateful: each key can produce only a fixed number of signatures, and reusing a state index breaks the security guarantee. State management should be handled in hardware such as an HSM, and any flow that transfers or duplicates key material - backup, restore, failover - must guarantee state is never reused.
 
 **Example Attack Scenarios:**
 
@@ -34,6 +35,8 @@ Scenario #2: An organisation migrates its leaf TLS certificates to PQC but leave
 3. [NSA Commercial National Security Algorithm Suite 2.0 (CNSA 2.0)](https://www.nsa.gov/Press-Room/News-Highlights/Article/Article/3148990/nsa-releases-future-quantum-resistant-qr-algorithm-requirements-for-national-se/): Software and firmware signing exclusively CNSA 2.0 by 2030.
 4. [IETF LAMPS Working Group](https://datatracker.ietf.org/wg/lamps/about/): PQC X.509 and CMS extensions.
 5. [EU Cyber Resilience Act, Annex I](https://eur-lex.europa.eu/eli/reg/2024/2847/oj/eng): State-of-the-art integrity and authenticity requirements.
+6. [NIST SP 800-208](https://csrc.nist.gov/pubs/sp/800/208/final): Recommendation for Stateful Hash-Based Signature Schemes (LMS, XMSS).
+7. [NSA - The Commercial National Security Algorithm Suite 2.0 and Quantum Computing FAQ, v2.1](https://media.defense.gov/2022/Sep/07/2003071836/-1/-1/0/CSI_CNSA_2.0_FAQ_.PDF): PP-24-4014, December 2024. Algorithm-allowance table: LMS/XMSS approved for firmware and software signing; SLH-DSA not approved for NSS use.
 
 **Standards and Regulatory Mapping:**
 
