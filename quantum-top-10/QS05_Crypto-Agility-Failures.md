@@ -2,7 +2,9 @@
 
 **Description:**
 
-Cryptographic agility is the engineering property that allows an algorithm, key size, or parameter set to be replaced without rebuilding the system around it. Most production systems hard-code cryptographic algorithms, key sizes, parameter sets, and key formats deep in code, configuration, hardware, and protocols. Systems that lack agility - algorithms baked into source, protocol logic, custom data formats, or non-updatable firmware - require replacement, not migration. As ML-KEM, ML-DSA, and SLH-DSA move into production and parameter sets continue to evolve through subsequent NIST rounds (Falcon, HQC, others), organisations without negotiable algorithms, abstracted crypto APIs, version-aware protocols, and dynamic policy will be unable to respond to standards updates, broken parameter sets, or future migrations. Crypto-agility is itself a security control. Symmetric primitives are more quantum-resilient, but "quantum is only a public-key problem" must not be read as "symmetric needs no work": AES key sizes, hash strengths, MAC lengths, and KDFs all need review end-to-end.
+Cryptographic agility is the engineering property that allows an algorithm, key size, or parameter set to be replaced without rebuilding the system around it. Most production systems hard-code cryptographic algorithms, key sizes, parameter sets, and key formats deep in code, configuration, hardware, and protocols. Systems that lack agility - algorithms baked into source, protocol logic, custom data formats, or non-updatable firmware - require replacement, not migration. As ML-KEM, ML-DSA, and SLH-DSA move into production and parameter sets continue to evolve through subsequent NIST rounds (Falcon, HQC, others), organisations without negotiable algorithms, abstracted crypto APIs, version-aware protocols, and dynamic policy will be unable to respond to standards updates, broken parameter sets, or future migrations. Crypto-agility is itself a security control. Like any other control, it must have named owner, governed by policy, and measurable: a system can be technically agile but operationally unable to exercise that agility if no one is held accountable for authorising, driving, verifying and validating cryptographic changes.
+
+Symmetric primitives are more quantum-resilient, but "quantum is only a public-key problem" must not be read as "symmetric needs no work": AES key sizes, hash strengths, MAC lengths, and KDFs all need review end-to-end.
 
 **Common Examples of Vulnerability:**
 
@@ -20,12 +22,16 @@ Cryptographic agility is the engineering property that allows an algorithm, key 
 4. Test the rotation path end-to-end in non-production, including embedded and mobile clients, to surface agility blockers before migration.
 5. Include agility requirements in procurement: new contracts should require PQC support and demonstrable algorithm replacement on a defined timescale.
 6. Track IETF PQUIP and TLS working-group output for documented migration patterns and failure modes.
+7. Assign accountable owner and develop governing policy for cryptographic change, identify who will authorise it and maintain a tested runbook for time-pressure events.
+8. Make agility measurable and inventory-driven: track time-to-rotate, share systems behind the abstraction layer, and share protocols that negotiate rather than pin, since we can only utilise agile what the inventory (QS04) reveals.
 
 **Example Attack Scenarios:**
 
 Scenario #1: A NIST parameter set for a deployed PQC algorithm is later found weak. An organisation that hard-coded the algorithm cannot swap it without a full rebuild-and-reship cycle across firmware it cannot update in the field, leaving vulnerable systems exposed for the length of a replacement project.
 
 Scenario #2: A team adds a crypto abstraction layer but never tests rotation. When migration day arrives, an embedded client that pins a classical algorithm identifier silently fails PQC negotiation and continues on classical crypto, and the untested "agility" turns out to be theoretical - the attacker targets the client that never actually migrated.
+
+Scenario #3: An organisation that is technically agile, with crypto abstraction layer and negotiable protocols. When a deployed parameter set is deprecated, there is no named owner, no policy on who must approve the change, and no tested runbook. Ownership is disputed between platform, security, operation and application teams, the change stalls, and the deprecated parameter set stays in production past a regulatory deadline while an adversary harvesting the affected traffic benefits from every week of the delay. The agility exists on paper but could not be exercised, yielding the exposure a governance problem rather than a technical concern.
 
 **Reference Links:**
 
