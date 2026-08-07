@@ -22,7 +22,8 @@ The same Mosca's-inequality logic that governs confidentiality exposure (QS01) a
 3. Use ML-DSA (FIPS 204) for general digital signatures; use SLH-DSA (FIPS 205) for very long-lived, high-assurance signatures where stateless hash-based security is preferred.
 4. Plan for shorter certificate lifetimes during transition (e.g. the CA/Browser Forum 47-day TLS maximum effective 2029) to reduce the exposure window.
 5. Engage PKI, code-signing, and certificate-authority vendors on PQC roadmaps - failure here is a supply-chain blocker.
-6. For long-lived signed artefacts and credentials already failing the Mosca's-inequality test, plan re-signing or counter-signing with PQC schemes (ML-DSA, SLH-DSA) before the classical signature scheme is deprecated, rather than treating the artefact as settled once issued.
+6. For long-lived signed artefacts already failing the Mosca's-inequality test - contracts, filings, releases, and other fixed-content documents - plan re-signing or counter-signing with PQC schemes (ML-DSA, SLH-DSA) before the classical signature scheme is deprecated, rather than treating the artefact as settled once issued. Re-signing is sufficient here because the artefact's content is unchanged; the new signature only re-attests something that was already true.
+7. For long-lived credentials failing the same test, do not treat re-signing as equivalent to remediation. A credential asserts that a named subject controls a key, and a PQC signature over the same claim only re-asserts it with stronger cryptography - it does not re-establish the claim itself. Require re-issuance to rest on evidence independent of the credential being replaced (fresh identity proofing, a still-trusted anchor, or hardware attestation), not on the outgoing key vouching for its own successor.
 
 **Example Attack Scenarios:**
 
@@ -30,7 +31,7 @@ Scenario #1: An attacker with a future CRQC recovers the private key of a code-s
 
 Scenario #2: An organisation migrates its leaf TLS certificates to PQC but leaves the root and intermediate CAs on RSA. An attacker forges an intermediate CA signature with a CRQC and issues trusted certificates for arbitrary domains - the chain is only as strong as its weakest classical link.
 
-Scenario #3: A vendor issues software releases signed with ECDSA, with signatures expected to remain valid for the product's decade-long support lifetime. An attacker records the signed artefacts today and, after a CRQC becomes available, forges signatures on malicious updates that still validate against the long-lived, un-rotated trust anchor - the artefact was exposed from the day it was signed, under the same Mosca's-inequality logic that governs confidentiality.
+Scenario #3: A vendor issues software releases signed with ECDSA, with signatures expected to remain valid for the product's decade-long support lifetime. Once a CRQC exists, an attacker recovers the signing key and forges signatures on malicious updates that still validate against the long-lived, un-rotated trust anchor - the artefact was exposed from the day it was signed, under the same Mosca's-inequality logic that governs confidentiality.
 
 **Reference Links:**
 
