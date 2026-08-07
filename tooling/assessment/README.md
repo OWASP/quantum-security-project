@@ -111,6 +111,21 @@ independent of sensitivity labels.
 | D3 | Has an algorithm **rotation actually been executed end-to-end in a test environment** - including embedded and mobile clients - rather than assumed possible? | |
 | D4 | Do procurement contracts require PQC support and demonstrable algorithm replacement on a defined timescale? | |
 | D5 | Are symmetric-layer decisions (AES key sizes, hash strengths, MAC lengths, KDFs) reviewed as part of the programme, not exempted as "not a quantum problem"? | |
+| D6 | When a credential is re-issued during migration, is the authorization state bound to it (roles, entitlements, delegations, cached decisions, active sessions) explicitly re-established, rather than carried forward on subject continuity alone? | |
+| D7 | For machine, workload, and service identities, is the proofing required to re-enrol at migration defined and documented? | |
+| D8 | Does the rehearsal in D3 include a re-enrolment where the old credential is treated as untrusted, rather than one where it's available to authorise its own replacement? | |
+
+D1-D5 test whether the algorithm can be swapped. D6-D8 test whether the trust
+bound to the credential survives the swap - a rotation can pass D1-D5 in full
+and still leave every entitlement attached to the old key riding forward
+unexamined. (Credit: nmcitra, PR #34 review.)
+
+**Open structural question, not yet resolved:** identity and authorization
+currently appear only as a consequence within Domain D, not as a domain of
+their own, even though the population being migrated is mostly non-person
+entities that NIST SP 800-63-4 explicitly excludes from its assurance model.
+Whether that stays folded into Domain D or becomes its own domain is open for
+discussion - flagging rather than deciding it here.
 
 ## Domain E - Migration and hybrid deployment (QS06)
 
