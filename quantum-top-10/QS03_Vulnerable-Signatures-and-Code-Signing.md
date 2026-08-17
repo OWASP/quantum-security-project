@@ -6,6 +6,8 @@ Public-key signatures underpin code signing, supply-chain integrity, document va
 
 The same Mosca's-inequality logic that governs confidentiality exposure (QS01) applies to signature trust, with the inequality read against integrity rather than secrecy: if the time to migrate (X) plus the period a signature or credential must remain trustworthy (Y) exceeds the time until a CRQC exists (Z), that signature is already exposed. Contracts, regulatory filings, evidentiary records, signed software releases, and long-lived identity or credential issuance - government identity, professional credentials, root certificates - routinely carry validity periods long enough to fail this test today, independent of when a CRQC actually arrives.
 
+This scope also includes re-establishment failure: a migration can complete correctly on every cryptographic measure - the new signature verifies, the new certificate chains, the algorithm is compliant - while the process that issued the new credential accepted the wrong evidence to do so. An enrolment flow that takes proof-of-possession from a key this entry already classifies as forgeable, and issues a strong new credential on the strength of it, produces two certificates that both verify and a record indistinguishable from a correct migration. The risk is not that the signature fails; it is that the re-issuance accepted a compromised anchor as sufficient authority to mint its replacement. Prevention item 7 below is the mitigation for this failure mode specifically.
+
 **Common Examples of Vulnerability:**
 
 1. Certification authority hierarchies (root, intermediate, issuing CA) signing with RSA-2048 or ECDSA P-256 over multi-year validity periods.
