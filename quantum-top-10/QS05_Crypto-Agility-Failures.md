@@ -31,7 +31,7 @@ Scenario #1: A NIST parameter set for a deployed PQC algorithm is later found we
 
 Scenario #2: A team adds a crypto abstraction layer but never tests rotation. When migration day arrives, an embedded client that pins a classical algorithm identifier silently fails PQC negotiation and continues on classical crypto, and the untested "agility" turns out to be theoretical - the attacker targets the client that never actually migrated.
 
-Scenario #3: An organisation that is technically agile, with crypto abstraction layer and negotiable protocols. When a deployed parameter set is deprecated, there is no named owner, no policy on who must approve the change, and no tested runbook. Ownership is disputed between platform, security, operation and application teams, the change stalls, and the deprecated parameter set stays in production past a regulatory deadline while an adversary harvesting the affected traffic benefits from every week of the delay. The agility exists on paper but could not be exercised, leaving the exposure as a governance problem rather than a technical one.
+Scenario #3: An organisation has an abstraction layer, negotiable protocols, and a documented rotation runbook. Therefore, technically it is agile. No accountable owner is assigned to watch the triggers, so a broken parameter set, a CNSA 2.0 milestone, and a binding regulatory deadline all pass unobserved, and the runbook is not opened until an audit forces the question. The exposure undetected triggers, rather than slow execution. By then, the organisation is in breach with a rotation it has never timed against the deadline.
 
 **Reference Links:**
 
