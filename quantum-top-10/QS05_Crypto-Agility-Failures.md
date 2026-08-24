@@ -42,10 +42,13 @@ Scenario #3: An organisation has an abstraction layer, negotiable protocols, and
 3. [EU Coordinated Implementation Roadmap for PQC](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography): Explicit agility expectation.
 4. [IETF PQUIP Working Group](https://datatracker.ietf.org/wg/pquip/about/): Agility documents and migration patterns.
 5. [IETF - Hybrid key exchange in TLS 1.3 (draft-ietf-tls-hybrid-design)](https://datatracker.ietf.org/doc/draft-ietf-tls-hybrid-design/): Hybrid KEM negotiation.
+6. [NIST CSWP 39upd1 - Considerations for Achieving Crypto Agility](https://csrc.nist.gov/pubs/cswp/39/upd1/considerations-for-achieving-crypto-agility/final): Ownership and measurable agility.
 
 **Standards and Regulatory Mapping:**
 
 > **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+NIST CSWP 39upd1, Considerations for Achieving Crypto Agility: Strategies and Practices (Final, 29 June 2026, superseding CSWP 39 of 19 December 2025), is the authoritative crypto-agility anchor and directly addresses ownership and measurable agility. Companion anchors: NIST IR 8547 for migration-timeline framing, NSA CNSA 2.0 for dated deadlines, and NIST SP 1800-38 for practice detail. Offered subject to the leads' URL verification process.
 
 CISA, NSA, NIST Quantum-Readiness fact sheet (cryptographic agility recommendation). NCSC guidance on crypto-agility. EU Coordinated Implementation Roadmap explicit agility expectation. NIS2 Article 21(2)(h) implies agility through state-of-the-art and risk-based requirements. IETF PQUIP working group agility documents; IETF TLS working group on hybrid KEM and signature negotiation.
 
