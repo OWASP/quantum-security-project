@@ -23,7 +23,7 @@ Symmetric primitives are more quantum-resilient, but "quantum is only a public-k
 5. Include agility requirements in procurement: new contracts should require PQC support and demonstrable algorithm replacement on a defined timescale.
 6. Track IETF PQUIP and TLS working-group output for documented migration patterns and failure modes.
 7. Assign accountable owner and develop governing policy for cryptographic change, identify who will authorise it and maintain a tested runbook for time-pressure events.
-8. Make agility measurable and inventory-driven: track time-to-rotate, share of systems behind the abstraction layer, and share of protocols that negotiate rather than pin, since agility can only be exercised over what the inventory (QS04) reveals.
+8. Make agility measurable and inventory-bounded: track cryptographic time-to-rotate (cMTTR) as the primary metric, capped by the share of the estate visible in the CBOM (QS04), with abstraction-layer coverage and negotiation posture reported wherever useful.
 
 **Example Attack Scenarios:**
 
@@ -31,7 +31,7 @@ Scenario #1: A NIST parameter set for a deployed PQC algorithm is later found we
 
 Scenario #2: A team adds a crypto abstraction layer but never tests rotation. When migration day arrives, an embedded client that pins a classical algorithm identifier silently fails PQC negotiation and continues on classical crypto, and the untested "agility" turns out to be theoretical - the attacker targets the client that never actually migrated.
 
-Scenario #3: An organisation has an abstraction layer, negotiable protocols, and a documented rotation runbook. Therefore, technically it is agile. No accountable owner is assigned to watch the triggers, so a broken parameter set, a CNSA 2.0 milestone, and a binding regulatory deadline all pass unobserved, and the runbook is not opened until an audit forces the question. The exposure undetected triggers, rather than slow execution. By then, the organisation is in breach with a rotation it has never timed against the deadline.
+Scenario #3: An organisation has an abstraction layer, negotiable protocols, and a documented rotation runbook. Therefore, technically it is agile. No accountable owner is assigned to watch the triggers, so a broken parameter set, a CNSA 2.0 milestone, and a binding regulatory deadline all pass unobserved, and the runbook is not opened until an audit forces the question. The exposure is undetected triggers rather than slow execution. By then, the organisation is in breach with a rotation it has never timed against the deadline.
 
 **Reference Links:**
 
