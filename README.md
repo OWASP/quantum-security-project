@@ -23,8 +23,8 @@ and fear.
 
 ## About the project
 
-NIST, the UK NCSC, and EU institutions have all issued concrete guidance on
-post-quantum cryptography, crypto-agility, and harvest-now-decrypt-later
+The White House (Executive Order 14412), NIST, the UK NCSC, and EU institutions have all issued concrete dates and 
+guidance on post-quantum cryptography, crypto-agility, and harvest-now-decrypt-later
 mitigation - while quantum systems themselves move from research into cloud and
 enterprise environments. Yet security teams still face three gaps:
 
@@ -78,7 +78,7 @@ workloads on quantum computing platforms.
 |----|------|----------------|
 | [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | EU Roadmap end-2030; NCSC 2031; NSM-10 |
 | [QS02](quantum-top-10/QS02_Long-Lived-Sensitive-Data.md) | Long-Lived Sensitive Data | Mosca's inequality; EU Roadmap end-2030 |
-| [QS03](quantum-top-10/QS03_Vulnerable-Signatures-and-Code-Signing.md) | Vulnerable Signatures and Code-Signing | NSA CNSA 2.0 by 2030; CRA Annex I |
+| [QS03](quantum-top-10/QS03_Vulnerable-Signatures-and-Code-Signing.md) | Vulnerable Signatures and Code-Signing | NSA CNSA 2.0 by 2030; CRA Annex I | Executive Order 14412 |
 | [QS04](quantum-top-10/QS04_Absent-Cryptographic-Inventory-and-CBOM.md) | Absent Cryptographic Inventory and CBOM | NCSC 2028; EU Roadmap end-2026 |
 | [QS05](quantum-top-10/QS05_Crypto-Agility-Failures.md) | Crypto-Agility Failures | NIS2 Article 21(2)(h); IETF PQUIP/TLS WG |
 | [QS06](quantum-top-10/QS06_Insecure-Migration-and-Hybrid-Misuse.md) | Insecure Migration and Hybrid Misuse | EU Roadmap end-2030 standalone-classical prohibition |
