@@ -2,7 +2,9 @@
 
 **Description:**
 
-Cryptographic agility is the engineering property that allows an algorithm, key size, or parameter set to be replaced without rebuilding the system around it. Most production systems hard-code cryptographic algorithms, key sizes, parameter sets, and key formats deep in code, configuration, hardware, and protocols. Systems that lack agility - algorithms baked into source, protocol logic, custom data formats, or non-updatable firmware - require replacement, not migration. As ML-KEM, ML-DSA, and SLH-DSA move into production and parameter sets continue to evolve through subsequent NIST rounds (Falcon, HQC, others), organisations without negotiable algorithms, abstracted crypto APIs, version-aware protocols, and dynamic policy will be unable to respond to standards updates, broken parameter sets, or future migrations. Crypto-agility is itself a security control. Symmetric primitives are more quantum-resilient, but "quantum is only a public-key problem" must not be read as "symmetric needs no work": AES key sizes, hash strengths, MAC lengths, and KDFs all need review end-to-end.
+Cryptographic agility is the engineering property that allows an algorithm, key size, or parameter set to be replaced without rebuilding the system around it. Most production systems hard-code cryptographic algorithms, key sizes, parameter sets, and key formats deep in code, configuration, hardware, and protocols. Systems that lack agility - algorithms baked into source, protocol logic, custom data formats, or non-updatable firmware - require replacement, not migration. As ML-KEM, ML-DSA, and SLH-DSA move into production and parameter sets continue to evolve through subsequent NIST rounds (Falcon, HQC, others), organisations without negotiable algorithms, abstracted crypto APIs, version-aware protocols, and dynamic policy will be unable to respond to standards updates, broken parameter sets, or future migrations. Crypto-agility is itself a security control. Like any other control, it must have a named owner, a governing policy, and a measurable definition of agility: a system can be technically agile but operationally unable to exercise that agility if no one is held accountable for authorising, driving, verifying and validating cryptographic changes.
+
+Symmetric primitives are more quantum-resilient, but "quantum is only a public-key problem" must not be read as "symmetric needs no work": AES key sizes, hash strengths, MAC lengths, and KDFs all need review end-to-end.
 
 **Common Examples of Vulnerability:**
 
@@ -20,12 +22,16 @@ Cryptographic agility is the engineering property that allows an algorithm, key 
 4. Test the rotation path end-to-end in non-production, including embedded and mobile clients, to surface agility blockers before migration.
 5. Include agility requirements in procurement: new contracts should require PQC support and demonstrable algorithm replacement on a defined timescale.
 6. Track IETF PQUIP and TLS working-group output for documented migration patterns and failure modes.
+7. Assign accountable owner and develop governing policy for cryptographic change, identify who will authorise it and maintain a tested runbook for time-pressure events.
+8. Make agility measurable and inventory-bounded: track cryptographic time-to-rotate (cMTTR) as the primary metric, capped by the share of the estate visible in the CBOM (QS04), with abstraction-layer coverage and negotiation posture reported wherever useful.
 
 **Example Attack Scenarios:**
 
 Scenario #1: A NIST parameter set for a deployed PQC algorithm is later found weak. An organisation that hard-coded the algorithm cannot swap it without a full rebuild-and-reship cycle across firmware it cannot update in the field, leaving vulnerable systems exposed for the length of a replacement project.
 
 Scenario #2: A team adds a crypto abstraction layer but never tests rotation. When migration day arrives, an embedded client that pins a classical algorithm identifier silently fails PQC negotiation and continues on classical crypto, and the untested "agility" turns out to be theoretical - the attacker targets the client that never actually migrated.
+
+Scenario #3: An organisation has an abstraction layer, negotiable protocols, and a documented rotation runbook. Therefore, technically it is agile. No accountable owner is assigned to watch the triggers, so a broken parameter set, a CNSA 2.0 milestone, and a binding regulatory deadline all pass unobserved, and the runbook is not opened until an audit forces the question. The exposure is undetected triggers rather than slow execution. By then, the organisation is in breach with a rotation it has never timed against the deadline.
 
 **Reference Links:**
 
@@ -35,11 +41,15 @@ Scenario #2: A team adds a crypto abstraction layer but never tests rotation. Wh
 2. [UK NCSC - Timelines for migration to post-quantum cryptography](https://www.ncsc.gov.uk/guidance/pqc-migration-timelines): Agility expectations within PQC migration guidance.
 3. [EU Coordinated Implementation Roadmap for PQC](https://digital-strategy.ec.europa.eu/en/library/coordinated-implementation-roadmap-transition-post-quantum-cryptography): Explicit agility expectation.
 4. [IETF PQUIP Working Group](https://datatracker.ietf.org/wg/pquip/about/): Agility documents and migration patterns.
-5. [RFC 9954 - Hybrid Key Exchange in TLS 1.3](https://www.rfc-editor.org/info/rfc9954): Hybrid KEM negotiation (Informational, July 2026). Supersedes `draft-ietf-tls-hybrid-design`.
+5. [IETF - Hybrid key exchange in TLS 1.3 (draft-ietf-tls-hybrid-design)](https://datatracker.ietf.org/doc/draft-ietf-tls-hybrid-design/): Hybrid KEM negotiation.
+6. [NIST CSWP 39upd1 - Considerations for Achieving Crypto Agility](https://csrc.nist.gov/pubs/cswp/39/upd1/considerations-for-achieving-crypto-agility/final): Ownership and measurable agility.
+7. [RFC 9954 - Hybrid Key Exchange in TLS 1.3](https://www.rfc-editor.org/info/rfc9954): Hybrid KEM negotiation (Informational, July 2026). Supersedes `draft-ietf-tls-hybrid-design`.
 
 **Standards and Regulatory Mapping:**
 
 > **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
+
+NIST CSWP 39upd1, Considerations for Achieving Crypto Agility: Strategies and Practices (Final, 29 June 2026, superseding CSWP 39 of 19 December 2025), is the authoritative crypto-agility anchor and directly addresses ownership and measurable agility. Companion anchors: NIST IR 8547 for migration-timeline framing, NSA CNSA 2.0 for dated deadlines, and NIST SP 1800-38 for practice detail. Offered subject to the leads' URL verification process.
 
 CISA, NSA, NIST Quantum-Readiness fact sheet (cryptographic agility recommendation). NCSC guidance on crypto-agility. EU Coordinated Implementation Roadmap explicit agility expectation. NIS2 Article 21(2)(h) implies agility through state-of-the-art and risk-based requirements. IETF PQUIP working group agility documents; IETF TLS working group on hybrid KEM and signature negotiation.
 
