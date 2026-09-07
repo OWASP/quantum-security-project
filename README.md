@@ -97,6 +97,13 @@ Each entry follows a common [template](quantum-top-10/_template.md): description
 common examples, prevention, example attack scenarios, references, and a
 standards-and-regulatory mapping.
 
+### Supporting evidence
+
+New research, disclosed vulnerabilities, and cryptanalysis findings used to
+review the Top 10 are recorded in the [quantum security knowledge
+base](knowledgebase/README.md). It is a dated evidence-intake log mapped to the
+Top 10, not a replacement for the reviewed Top 10 guidance.
+
 ---
 
 ## Community calls
