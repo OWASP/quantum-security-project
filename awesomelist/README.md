@@ -2,7 +2,7 @@
 
 > Useful resources for Post-Quantum Cryptography 
 
-Post-Quantum Cryptography is the field of cyber security concerned with updating cryptographic systems to achieve quantum resistance, remaining secure once powerful quantum computers have beeen created.
+Post-Quantum Cryptography is the field of cyber security concerned with updating cryptographic systems to achieve quantum resistance, remaining secure once powerful quantum computers have been created.
 
 
 ## Contents
@@ -19,7 +19,7 @@ Post-Quantum Cryptography is the field of cyber security concerned with updating
 
 Tools and resources that assist with the creation of cryptographic inventories, used to help guide PQC migrations.
 
-- [open-crypto-rules](https://github.com/scanoss/open-crypto-rules) - Open source Semgrep/OpenGrep rules for detecting cryptographic usage in source code (cuurently C, Go & Rust).
+- [open-crypto-rules](https://github.com/scanoss/open-crypto-rules) - Open source Semgrep/OpenGrep rules for detecting cryptographic usage in source code (currently C, Go & Rust).
 - [pq-audit](http://github.com/mk-scorpiosec/pq-audit) - A tool that evaluates cryptographic posture, infrastructure configuration, and code against NIST PQC standards.
 
 
