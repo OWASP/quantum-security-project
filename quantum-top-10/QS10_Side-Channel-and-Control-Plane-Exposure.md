@@ -2,43 +2,41 @@
 
 **Description:**
 
-Unlike classical processors, quantum computers depend on extensive classical control infrastructure to execute any quantum operation - signal generators, mixers, FPGAs, room-scale racks of conventional electronics, and classical control software. This control plane mediates everything that reaches the QPU and everything observed from it, has not been studied comprehensively from a security perspective, and is more physically accessible than the microchip-scale architecture of classical CPUs. Side-channel attacks against this layer are demonstrated: timing analysis of reset operations reveals program execution patterns (Mi et al., CCS 2022), and power-consumption traces from quantum controllers enable reverse-engineering of gate-level circuits (Xu et al., CCS 2023). Combined with the fact that current platforms have no quantum memory or quantum networking - so every job carries its data hardcoded into the program itself - interception or side-channel observation of the control plane is a direct path to leaking the workload it runs.
+Quantum computers depend on extensive classical control infrastructure - including signal generators, arbitrary waveform generators, mixers, FPGAs, controller electronics, and control software - to translate circuits into the pulses that operate a QPU. Although unknown quantum states cannot be copied, these classical control signals can leak information about the workload. Xu et al. (CCS 2023) demonstrated timing, energy, and power-trace attacks that identify circuits and circuit properties; under their strongest per-channel trace model, an attacker can reconstruct the sequence of non-virtual gates. The demonstrated threat model assumes physical access to the controller, such as access by a malicious data-centre insider. The authors state that controller power data is not currently exposed by cloud providers and describe a remote extension as future risk. This is therefore evidence of a controller-physical-access and insider threat, not evidence that an ordinary remote tenant can perform the attack today. Exposure can reveal proprietary algorithms and, when inputs or parameters are encoded in circuit elements such as oracles or ansatzes, sensitive data.
 
 **Common Examples of Vulnerability:**
 
-1. Classical control infrastructure (signal generators, mixers, FPGAs, control software) accessible to other tenants or the platform operator.
-2. Timing observability of a tenant's circuit execution, leaking program structure via reset-operation timing.
-3. Power-trace observability where control electronics are co-located with other workloads in a shared physical environment.
-4. Platforms that do not document side-channel resistance properties.
-5. Sensitive data hardcoded into circuits (no quantum memory), so any control-plane compromise is data compromise.
+1. Controller electronics or their power, electromagnetic, or timing signals are accessible to unauthorised personnel.
+2. Controller telemetry and diagnostic traces are collected or retained without access controls equivalent to the sensitivity of the workloads they describe.
+3. Job-management, calibration, and controller-administration roles are not separated or audited.
+4. Providers do not document the physical-access assumptions, telemetry exposure, or side-channel resistance of their control infrastructure.
+5. Proprietary circuit structure, or sensitive inputs and parameters encoded in circuit elements, is submitted without accounting for controller-side information leakage.
 
 **How to Prevent:**
 
-1. For sensitive workloads, prefer providers that document side-channel resistance and physical isolation properties.
-2. For on-premises quantum hardware, apply physical security controls comparable to cryptographic key infrastructure: restricted access, monitoring, tamper-evidence.
-3. Where workloads can be split, randomise execution timing and parameter ordering to reduce information leak.
-4. Engage providers on disclosure of side-channel research and applied mitigations.
-5. Treat control-plane compromise as equivalent to workload compromise - the data is hardcoded in the circuit.
-6. Track ongoing research; new results appear at major security venues each year.
+1. Restrict, monitor, and audit physical access to controller electronics; use tamper-evident controls appropriate to the sensitivity of hosted workloads.
+2. Minimise collection of controller power and timing telemetry, isolate monitoring interfaces, and protect any retained traces as sensitive workload-derived data.
+3. Enforce least privilege and role separation across job management, calibration, controller administration, and telemetry access.
+4. Require providers to state their side-channel threat model and disclose which physical and logical controls protect the controller plane.
+5. Evaluate workload-level mitigations described by Xu et al. where appropriate, including duration or energy equalisation and logically equivalent circuit transformations. Test the security, fidelity, and performance trade-offs: the paper notes that a defence against one metric may not resist combined side channels.
+6. Avoid encoding sensitive values in circuit structure when the use case permits, and assess the impact if circuit identity, gates, qubit mapping, or parameters are exposed.
 
 **Example Attack Scenarios:**
 
-Scenario #1: An attacker with access to the classical control plane performs timing analysis of reset operations (Mi et al., CCS 2022), recovering the structure of a victim tenant's quantum program from the timing of classical reset commands - without touching the qubits themselves.
+Scenario #1: A malicious data-centre insider instruments the per-channel power consumption of QPU controller electronics. With knowledge of the controller's basis pulses, the attacker reconstructs the victim circuit's non-virtual gate sequence and infers proprietary algorithm structure (Xu et al., CCS 2023).
 
-Scenario #2: Power-consumption traces are captured from the controllers driving the QPU (Xu et al., CCS 2023). Power analysis of the classical electronics recovers the gate sequence of a confidential circuit; because the circuit's data is hardcoded, reconstructing the gates reconstructs the workload and its inputs.
+Scenario #2: An unauthorised controller operator captures timing or aggregate energy measurements for a victim's repeated circuit executions. Comparing the measurements with known candidate circuits lets the attacker identify which workload ran and infer circuit properties. This scenario requires controller-level or physical measurement access under the demonstrated threat model; remote tenant access is not assumed.
 
 **Reference Links:**
 
-<!-- References verified 2026-07-13. Academic titles/DOIs corrected; #1 is a defense paper documenting reset-operation state leakage, #2 is a distinct CCS 2023 paper from the reset-operations one cited in QS08. -->
+<!-- References re-verified against the papers on 2026-07-29. Mi et al. (CCS 2022) was removed because it demonstrates residual qubit-state leakage across reset operations, not reset-timing or classical-controller leakage; it is relevant to QS08 instead. -->
 
-1. [Mi et al. - Securing Reset Operations in NISQ Quantum Computers (CCS 2022)](https://doi.org/10.1145/3548606.3559380): Documents reset-operation state leakage / timing exposure across tenants.
-2. [Xu et al. - Exploration of Power Side-Channel Vulnerabilities in Quantum Computer Controllers (CCS 2023)](https://doi.org/10.1145/3576915.3623118): Gate-level circuit reverse-engineering via power traces.
-3. [NIST FIPS 140-3 - Security Requirements for Cryptographic Modules](https://csrc.nist.gov/pubs/fips/140-3/final): Classical physical-security framework offering partial conceptual coverage.
-4. [Common Criteria (ISO/IEC 15408)](https://www.commoncriteriaportal.org/): Side-channel evaluation concepts not yet adapted to quantum control infrastructure.
+1. [Xu et al. - Exploration of Power Side-Channel Vulnerabilities in Quantum Computer Controllers (CCS 2023)](https://doi.org/10.1145/3576915.3623118): Demonstrates timing, energy, and power-trace attacks against controller signals, states the physical-access threat model, and evaluates workload-level defences.
+2. [NIST FIPS 140-3 - Security Requirements for Cryptographic Modules](https://csrc.nist.gov/pubs/fips/140-3/final): Classical physical-security framework offering partial conceptual coverage.
+3. [Common Criteria (ISO/IEC 15408)](https://www.commoncriteriaportal.org/): General security-evaluation framework; quantum-controller-specific protection profiles are not established here.
 
 **Standards and Regulatory Mapping:**
 
 > **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
 
-No formal standard yet covers quantum platform side channels. The relevant published research includes Mi et al. on timing side channels (CCS 2022) and Xu et al. on power side-channel attacks (CCS 2023). General classical side-channel frameworks (FIPS 140-3 physical security requirements, Common Criteria) provide partial conceptual coverage but have not been adapted to quantum control infrastructure.
-
+No formal standard cited here specifically covers quantum-platform controller side channels. The relevant published research is Xu et al. on timing and power side-channel attacks against quantum-computer controllers (CCS 2023). General classical frameworks (FIPS 140-3 physical-security requirements and Common Criteria) provide partial conceptual coverage, but citing them does not establish quantum-controller-specific compliance or resistance.

@@ -74,18 +74,24 @@ existing classical cryptography must be replaced with post-quantum equivalents.
 QS08-QS10 address the **platform surface** - risks to organisations running
 workloads on quantum computing platforms.
 
+> **Candidate restructuring under Sprint 1 discussion (see #11):** QS01 and
+> QS02 have merged into a single Harvest-Now-Decrypt-Later entry covering both
+> in-transit and at-rest confidentiality exposure under Mosca's inequality;
+> QS02's signature and credential-lifetime content moved into QS03. This frees
+> a slot pending the Sprint 1 candidate list - not a claim that any specific
+> replacement is already decided.
+
 | ID | Risk | Primary anchor |
 |----|------|----------------|
-| [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | EU Roadmap end-2030; NCSC 2031; NSM-10 |
-| [QS02](quantum-top-10/QS02_Long-Lived-Sensitive-Data.md) | Long-Lived Sensitive Data | Mosca's inequality; EU Roadmap end-2030 |
+| [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | Mosca's inequality; EU Roadmap end-2030; NCSC 2031; NSM-10 |
 | [QS03](quantum-top-10/QS03_Vulnerable-Signatures-and-Code-Signing.md) | Vulnerable Signatures and Code-Signing | NSA CNSA 2.0 by 2030; CRA Annex I |
 | [QS04](quantum-top-10/QS04_Absent-Cryptographic-Inventory-and-CBOM.md) | Absent Cryptographic Inventory and CBOM | NCSC 2028; EU Roadmap end-2026 |
 | [QS05](quantum-top-10/QS05_Crypto-Agility-Failures.md) | Crypto-Agility Failures | NIS2 Article 21(2)(h); IETF PQUIP/TLS WG |
 | [QS06](quantum-top-10/QS06_Insecure-Migration-and-Hybrid-Misuse.md) | Insecure Migration and Hybrid Misuse | EU Roadmap end-2030 standalone-classical prohibition |
 | [QS07](quantum-top-10/QS07_Hardware-Roots-of-Trust.md) | Hardware Roots of Trust | NCSC 2028 milestone; CRA Annex IV |
-| [QS08](quantum-top-10/QS08_QPU-Tenant-Isolation-Failures.md) | QPU Tenant Isolation Failures | Li et al. NDSS 2025; Xu et al. CCS 2023 |
+| [QS08](quantum-top-10/QS08_QPU-Tenant-Isolation-Failures.md) | QPU Tenant Isolation Failures | Choudhury et al. NDSS 2025; Xu et al. CCS 2023 |
 | [QS09](quantum-top-10/QS09_Toolchain-and-Compiler-Compromise.md) | Toolchain and Compiler Compromise | Suresh et al. HASP 2021; Chu et al. ICASSP 2023 |
-| [QS10](quantum-top-10/QS10_Side-Channel-and-Control-Plane-Exposure.md) | Side-Channel and Control-Plane Exposure | Mi et al. CCS 2022; Xu et al. CCS 2023 |
+| [QS10](quantum-top-10/QS10_Side-Channel-and-Control-Plane-Exposure.md) | Side-Channel and Control-Plane Exposure | Xu et al. CCS 2023 |
 
 Each entry follows a common [template](quantum-top-10/_template.md): description,
 common examples, prevention, example attack scenarios, references, and a

@@ -35,7 +35,7 @@ Scenario #3: An organisation has an abstraction layer, negotiable protocols, and
 
 **Reference Links:**
 
-<!-- References verified 2026-07-13 against authoritative canonical sources. NCSC has no standalone crypto-agility page; the PQC migration timelines page is the appropriate anchor. -->
+<!-- References verified 2026-07-27 against authoritative primary sources. NCSC has no standalone crypto-agility page; the PQC migration timelines page is the appropriate anchor, and its 2028/2031/2035 milestones were confirmed against the live page. Reference #5 updated: draft-ietf-tls-hybrid-design was published as RFC 9954 in July 2026. -->
 
 1. [CISA, NSA, NIST - Quantum-Readiness fact sheet](https://www.cisa.gov/resources-tools/resources/quantum-readiness-migration-post-quantum-cryptography): Cryptographic agility recommendation.
 2. [UK NCSC - Timelines for migration to post-quantum cryptography](https://www.ncsc.gov.uk/guidance/pqc-migration-timelines): Agility expectations within PQC migration guidance.
@@ -43,6 +43,7 @@ Scenario #3: An organisation has an abstraction layer, negotiable protocols, and
 4. [IETF PQUIP Working Group](https://datatracker.ietf.org/wg/pquip/about/): Agility documents and migration patterns.
 5. [IETF - Hybrid key exchange in TLS 1.3 (draft-ietf-tls-hybrid-design)](https://datatracker.ietf.org/doc/draft-ietf-tls-hybrid-design/): Hybrid KEM negotiation.
 6. [NIST CSWP 39upd1 - Considerations for Achieving Crypto Agility](https://csrc.nist.gov/pubs/cswp/39/upd1/considerations-for-achieving-crypto-agility/final): Ownership and measurable agility.
+7. [RFC 9954 - Hybrid Key Exchange in TLS 1.3](https://www.rfc-editor.org/info/rfc9954): Hybrid KEM negotiation (Informational, July 2026). Supersedes `draft-ietf-tls-hybrid-design`.
 
 **Standards and Regulatory Mapping:**
 
