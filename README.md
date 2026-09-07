@@ -43,8 +43,9 @@ This project closes those gaps with work that is:
 
 | Track | Focus | Key deliverables |
 |-------|-------|------------------|
-| **Track 1** (primary, year one) | Quantum security risks & readiness | OWASP Top 10 for Quantum Security Risks, mitigation guidance, and a Quantum Readiness Assessment Assistant |
+| **Track 1** (primary, year one) | Quantum security risks & readiness | <ul><li>**Top-10** - The primary effort to establish a top-10 list of quantum security risks and mitigations. See [quantum-top-10](./quantum-top-10/).</li><li>**Awesomelist** - A curated set of links to awesome resources and tools that support quantum security. See [awesomelist](./awesomelist/).</li><li>**Knowledgebase** - A running log of disclosed vulnerabilities and cryptanalysis findings relevant to quantum security, mapped against the Top 10. See [knowledgebase](./knowledgebase/).</li><li>**Quantum Readiness Assessment** - TBC.</li></ul> |
 | **Track 2** (parallel) | Quantum platform threat modeling | Threat models, reference architectures, attack-surface mapping, and secure-design guidance for quantum platforms |
+
 
 ---
 
@@ -111,42 +112,9 @@ kick-off deck; decks for subsequent calls are added there as they happen.
 
 ## How to contribute
 
-Feedback and contributions are welcome - this is a community project and the
-Top 10 is explicitly a draft opened for discussion.
+Feedback and contributions are welcome - this is a community project and the Top 10 is explicitly a draft opened for discussion.
 
-**1. Clone the repository**
-
-```bash
-git clone https://github.com/OWASP/quantum-security-project.git
-cd quantum-security-project
-```
-
-**2. Propose a change with a pull request**
-
-```bash
-git checkout -b my-contribution
-# edit or add entries under quantum-top-10/ (start from _template.md for new risks)
-git commit -am "Describe your change"
-git push -u origin my-contribution
-```
-
-Then open a pull request against `main`. Please ground new or revised content in
-published standards, regulation, or peer-reviewed research, and keep the project
-vendor-neutral.
-
-**3. Or share feedback via GitHub Issues**
-
-Prefer to discuss before writing a change? [Open an issue](https://github.com/OWASP/quantum-security-project/issues)
-to suggest a candidate risk, flag an error, question the selection or ordering,
-or start a conversation. Issues are the best place for feedback that isn't yet a
-concrete edit.
-
-**Quick submission forms**
-
-During the bootstrap phase you can also contribute via these forms without using GitHub:
-
-- [Top 10 for Quantum Security - candidate risks & feedback](https://forms.gle/8NbEEX6mmiKdUXxXA)
-- [Work Areas & Proposals - propose a topic or working area](https://forms.gle/n7BicJJpQJFQ8eRz7)
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ---
 
