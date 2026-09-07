@@ -28,6 +28,7 @@ Tools and resources that assist with the creation of cryptographic inventories, 
 - [boringssl](https://boringssl.googlesource.com/boringssl) - Google-maintained fork of OpenSSL for internal and specific project needs.
 - [openssl](https://github.com/openssl/openssl) - Production-grade implementations of NIST-standardised algorithms, from version 3.5 onwards.
 - [liboqs](https://github.com/open-quantum-safe/liboqs) - Implements a broad range of standardised and candidate PQC schemes, great for experimentation but not recommended for production.
+- [SymCrypt](https://github.com/microsoft/SymCrypt) - A Microsoft-maintained, high-performance cryptographic library for Windows, Linux, and Mac that supports ML-KEM, ML-DSA, LMS, and SLH-DSA and more. It includes formal proofs and is pursuing FIPS 140-3 validation. 
 
 
 ## Standards
