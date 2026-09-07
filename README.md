@@ -74,10 +74,16 @@ existing classical cryptography must be replaced with post-quantum equivalents.
 QS08-QS10 address the **platform surface** - risks to organisations running
 workloads on quantum computing platforms.
 
+> **Candidate restructuring under Sprint 1 discussion (see #11):** QS01 and
+> QS02 have merged into a single Harvest-Now-Decrypt-Later entry covering both
+> in-transit and at-rest confidentiality exposure under Mosca's inequality;
+> QS02's signature and credential-lifetime content moved into QS03. This frees
+> a slot pending the Sprint 1 candidate list - not a claim that any specific
+> replacement is already decided.
+
 | ID | Risk | Primary anchor |
 |----|------|----------------|
-| [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | EU Roadmap end-2030; NCSC 2031; NSM-10 |
-| [QS02](quantum-top-10/QS02_Long-Lived-Sensitive-Data.md) | Long-Lived Sensitive Data | Mosca's inequality; EU Roadmap end-2030 |
+| [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | Mosca's inequality; EU Roadmap end-2030; NCSC 2031; NSM-10 |
 | [QS03](quantum-top-10/QS03_Vulnerable-Signatures-and-Code-Signing.md) | Vulnerable Signatures and Code-Signing | NSA CNSA 2.0 by 2030; CRA Annex I |
 | [QS04](quantum-top-10/QS04_Absent-Cryptographic-Inventory-and-CBOM.md) | Absent Cryptographic Inventory and CBOM | NCSC 2028; EU Roadmap end-2026 |
 | [QS05](quantum-top-10/QS05_Crypto-Agility-Failures.md) | Crypto-Agility Failures | NIS2 Article 21(2)(h); IETF PQUIP/TLS WG |
