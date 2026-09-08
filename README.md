@@ -74,12 +74,12 @@ existing classical cryptography must be replaced with post-quantum equivalents.
 QS08-QS10 address the **platform surface** - risks to organisations running
 workloads on quantum computing platforms.
 
-> **Candidate restructuring under Sprint 1 discussion (see #11):** QS01 and
-> QS02 have merged into a single Harvest-Now-Decrypt-Later entry covering both
+> **Restructuring landed (see #11, merged via #38):** the former QS01 and QS02
+> have merged into a single Harvest-Now-Decrypt-Later entry covering both
 > in-transit and at-rest confidentiality exposure under Mosca's inequality;
-> QS02's signature and credential-lifetime content moved into QS03. This frees
-> a slot pending the Sprint 1 candidate list - not a claim that any specific
-> replacement is already decided.
+> QS02's signature and credential-lifetime content moved into QS03. This freed
+> a slot in the numbering, which the candidate entries below are under review
+> to fill - no replacement is decided yet.
 
 | ID | Risk | Primary anchor |
 |----|------|----------------|
@@ -96,6 +96,19 @@ workloads on quantum computing platforms.
 Each entry follows a common [template](quantum-top-10/_template.md): description,
 common examples, prevention, example attack scenarios, references, and a
 standards-and-regulatory mapping.
+
+### Candidate entries under review
+
+These proposals have merged into [`quantum-top-10/`](quantum-top-10/) with a
+`QSxx` placeholder rather than a number, pending Sprint 1 community ranking.
+None is confirmed for v1, and inclusion here is not an indication of outcome.
+
+| Candidate | Risk | Surface | PR |
+|---|---|---|---|
+| [QSxx](quantum-top-10/QSxx_Compliance-Obligations.md) | Compliance Obligations | Migration | [#13](https://github.com/OWASP/quantum-security-project/pull/13) |
+| [QSxx](quantum-top-10/QSxx_Misdirected-Quantum-Countermeasures.md) | Misdirected Quantum Countermeasures | Migration | [#20](https://github.com/OWASP/quantum-security-project/pull/20) |
+| [QSxx](quantum-top-10/QSxx_Insecure-Quantum-Software-Supply-Chain.md) | Insecure Quantum Software Supply Chain | Platform | [#39](https://github.com/OWASP/quantum-security-project/pull/39) |
+| [QSxx](quantum-top-10/QSxx_Unverifiable-Quantum-Execution-and-Result-Assurance.md) | Unverifiable Quantum Execution and Result Assurance | Platform | [#22](https://github.com/OWASP/quantum-security-project/pull/22) |
 
 ---
 
