@@ -6,7 +6,7 @@ Quantum applications depend on a software supply chain that extends beyond the q
 
 A compromise at any of these stages can introduce malicious or unauthorized changes before the workload reaches a trusted quantum compiler or platform. The resulting application or circuit may remain syntactically valid and operational while producing manipulated results, leaking intellectual property, or embedding malicious behavior.
 
-This candidate risk is intentionally distinct from QS09:2026 - Toolchain and Compiler Compromise. QS09 addresses whether the quantum transformation and execution toolchain can be trusted. This risk addresses whether the software and artifacts entering that toolchain can be trusted in the first place. A trusted compiler cannot compensate for a compromised dependency, build process, CI/CD pipeline, or artifact delivered to it.
+This candidate risk is distinct from QS03:2026 - Vulnerable Signatures and Code-Signing, QS04:2026 - Absent Cryptographic Inventory and CBOM, and QS09:2026 - Toolchain and Compiler Compromise.QS03 addresses the quantum vulnerability of cryptographic signatures, certificates, and code-signing trust anchors used to establish authenticity. QS04 addresses the ability to discover and inventory cryptographic usage, dependencies, and trust material needed for quantum-readiness and migration. QS09 addresses whether the quantum transformation and execution toolchain can be trusted. This risk addresses whether the software and artifacts entering that toolchain can be trusted in the first place. A trusted compiler cannot compensate for a compromised dependency, build process, CI/CD pipeline, or artifact delivered to it.
 
 Common Examples of Vulnerability:
 
