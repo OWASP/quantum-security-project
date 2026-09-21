@@ -6,15 +6,15 @@ Adversaries are already capturing encrypted traffic and stored ciphertext today,
 
 **Scope:**
 
-This entry covers exposure created by recording classically-encrypted data or key-establishment traffic today for decryption once a CRQC exists. It does not cover the downstream consequences of that data remaining sensitive for a long time (see QS02), the organisational inventory work needed to find exposed systems (see QS04), the ability of an organisation to migrate quickly (see QS05), or defects introduced during the migration itself (see QS06). QS01 is the exposure created by capture-now; QS02 is the reason the captured data still matters years later.
+This entry is about the risk of someone recording your encrypted data or key exchange today, so they can decrypt it later once a quantum computer is powerful enough. It does not cover why that data still matters years later (see QS02), how to find which systems are exposed (see QS04), how fast an organisation can migrate (see QS05), or mistakes made during migration (see QS06). Put simply: QS01 is the capture happening now; QS02 is why that captured data is still worth stealing years later.
 
 **Evidence:**
 
 **Classification:** Demonstrated
 
-**Justification:** Passive recording of RSA/ECDH/DH-protected traffic and ciphertext is routine, publicly documented adversary tradecraft, and Shor's algorithm's ability to break these primitives is a proven mathematical result - not a speculative one. The only undemonstrated component is the future availability of a CRQC capable of running Shor's algorithm at cryptographically relevant key sizes.
+**Justification:** Two things are already known to be true, not just theoretical: attackers really do record encrypted traffic today, and Shor's algorithm really can break RSA/ECDH/DH once a powerful enough quantum computer exists. The only piece still missing is that quantum computer itself.
 
-**Primary Evidence:** NSM-10 and OMB M-23-02 (references below) cite HNDL as the primary driver of US federal migration policy, and NCSC/EU migration guidance treats bulk-recorded ciphertext as an active exposure today.
+**Primary Evidence:** US government policy (NSM-10, OMB M-23-02) names this exact risk as the reason it is pushing migration now, and UK/EU guidance treats today's recorded traffic as already exposed, not a future concern.
 
 **Common Examples of Vulnerability:**
 
@@ -25,10 +25,10 @@ This entry covers exposure created by recording classically-encrypted data or ke
 
 **Detection:**
 
-1. Cryptographic inventory / CBOM sweep to identify TLS endpoints, VPN tunnels, backup channels, and archival storage still negotiating RSA, finite-field DH, or ECDH key establishment (see QS04).
-2. Configuration analysis of TLS/VPN gateways to confirm whether hybrid PQC key establishment (e.g. ML-KEM) is offered and preferred over classical-only cipher suites.
-3. Data classification review to identify datasets whose confidentiality requirement extends past the point a CRQC is plausible, so migration effort can be prioritised by exposure window rather than by system age.
-4. Network boundary review to identify points where traffic can be passively recorded (peering points, cloud egress, satellite/microwave links) and cross-reference against the key-establishment methods in use there.
+1. List out which systems (TLS, VPN, backups, archives) still use RSA, DH, or ECDH to set up encryption keys (see QS04).
+2. Check TLS/VPN gateway settings to see if they offer and prefer a post-quantum option like ML-KEM, instead of classical-only.
+3. Sort your data by how long it needs to stay secret, so you fix the longest-lived, most sensitive data first - not just the oldest systems.
+4. Find the places where traffic can be quietly recorded (network peering points, cloud exit points, satellite links) and check what encryption those points use.
 
 **How to Prevent:**
 
@@ -54,10 +54,10 @@ Scenario #2: An organisation encrypts long-retention backups at rest with AES-25
 
 **Related Risks:**
 
-- **QS02 - Long-Lived Sensitive Data:** QS01 is the capture event; QS02 is why the captured data remains a liability for years afterward.
-- **QS04 - Absent Cryptographic Inventory and CBOM:** A cryptographic inventory is required to identify quantum-vulnerable key establishment and prioritise HNDL exposure.
-- **QS05 - Crypto-Agility Failures:** Poor crypto-agility increases migration time, extending the HNDL exposure window.
-- **QS06 - Insecure Migration and Hybrid Misuse:** Migration failures may leave HNDL exposure unresolved even after migration has begun.
+- **QS02 - Long-Lived Sensitive Data:** QS01 is the theft happening now; QS02 explains why that stolen data is still dangerous years later.
+- **QS04 - Absent Cryptographic Inventory and CBOM:** You need a list of what encryption you use to know what's exposed to QS01.
+- **QS05 - Crypto-Agility Failures:** If you're slow to switch algorithms, this risk stays open longer.
+- **QS06 - Insecure Migration and Hybrid Misuse:** Even after starting migration, mistakes can leave this risk unfixed.
 
 **Reference Links:**
 
