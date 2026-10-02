@@ -1,7 +1,7 @@
 # Sprint Plan and Project Timeline
 ## OWASP Top 10 for Quantum Security Risks (2026)
 
-**Status:** Draft for community discussion
+**Status:** Draft for community discussion - needs to be updated
 **Current release:** v0.1 draft (June 2026)
 **Target publication:** week commencing 26 October 2026
 **Co-leads:** John Sotiropoulos and Roy Barkay
