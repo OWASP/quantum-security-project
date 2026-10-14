@@ -24,7 +24,7 @@ Hybrid is also an interim state rather than a destination. The EU roadmap prohib
 
 **How to Prevent:**
 
-1. Adopt standard named hybrid groups through a maintained library rather than assembling a combiner: the RFC 9954 construction with the ECDHE-MLKEM groups from `draft-ietf-tls-ecdhe-mlkem`. Where a custom combination is genuinely unavoidable, derive the key with a KDF over both inputs - never by selection or XOR.
+1. Adopt standard named hybrid groups through a maintained library rather than assembling a combiner: the RFC 9954 construction with the ECDHE-MLKEM groups from RFC 10024. Where a custom combination is genuinely unavoidable, derive the key with a KDF over both inputs - never by selection or XOR.
 2. Monitor the negotiated group in production and alert on classical-only handshakes. Hybrid that is configured but unobserved is indistinguishable from hybrid that is not working.
 3. Test fallback behaviour explicitly: induce hybrid handshake failure in a test harness and confirm the client behaves as policy requires - failing closed where classical-only is not acceptable - rather than silently retrying classical.
 4. Pilot for handshake size before rollout, measuring ClientHello fragmentation, middlebox behaviour, latency, and throughput for each architecture pattern, so capacity problems surface in test rather than as a production incident whose fastest fix is turning hybrid off.
@@ -42,10 +42,10 @@ Scenario #3: Following a hybrid TLS rollout, an organisation sees intermittent h
 
 **Reference Links:**
 
-<!-- References verified 2026-07-27 against authoritative primary sources. RFC 9954 supersedes draft-ietf-tls-hybrid-design (published July 2026); draft-ietf-tls-ecdhe-mlkem replaces draft-kwiatkowski-tls-ecdhe-mlkem and is approved, awaiting RFC publication. -->
+<!-- References verified 2026-07-27 against authoritative primary sources. RFC 9954 (published July 2026) supersedes draft-ietf-tls-hybrid-design. Reference #2 updated 2026-10-14: draft-ietf-tls-ecdhe-mlkem-05 was published as RFC 10024 in August 2026, having replaced draft-kwiatkowski-tls-ecdhe-mlkem. -->
 
 1. [RFC 9954 - Hybrid Key Exchange in TLS 1.3](https://www.rfc-editor.org/info/rfc9954): The standardised hybrid construction for TLS 1.3 (Informational, July 2026). Supersedes `draft-ietf-tls-hybrid-design`.
-2. [draft-ietf-tls-ecdhe-mlkem - Post-quantum hybrid ECDHE-MLKEM key agreement for TLS 1.3](https://datatracker.ietf.org/doc/draft-ietf-tls-ecdhe-mlkem/): Defines the X25519MLKEM768, SecP256r1MLKEM768, and SecP384r1MLKEM1024 groups. IESG-approved and awaiting RFC publication; replaces `draft-kwiatkowski-tls-ecdhe-mlkem`.
+2. [RFC 10024 - Post-Quantum Traditional (PQ/T) Hybrid Key Agreement Mechanisms for TLS 1.3](https://www.rfc-editor.org/info/rfc10024): Defines the X25519MLKEM768, SecP256r1MLKEM768, and SecP384r1MLKEM1024 groups (Standards Track, August 2026). Supersedes `draft-ietf-tls-ecdhe-mlkem`, which had replaced `draft-kwiatkowski-tls-ecdhe-mlkem`.
 3. [RFC 8446 - TLS 1.3](https://www.rfc-editor.org/rfc/rfc8446): Section 4.1.3 is the version-downgrade sentinel (`ServerHello.random`); handshake integrity against group/parameter tampering comes from the Finished MAC over the transcript hash (Section 4.4.4 and the key schedule) - a separate mechanism. Together they confine the practical downgrade path to endpoint fallback behaviour rather than in-handshake tampering.
 4. [NIST FIPS 203 (ML-KEM)](https://csrc.nist.gov/pubs/fips/203/final) and [FIPS 204 (ML-DSA)](https://csrc.nist.gov/pubs/fips/204/final): Standardised PQC primitives for hybrid use.
 5. [Bernstein et al. - KyberSlash: Exploiting secret-dependent division timings in Kyber implementations](https://eprint.iacr.org/2024/1049): Secret-key recovery from timing leaks in ML-KEM implementations, including reference code (IACR TCHES).
@@ -58,4 +58,4 @@ Scenario #3: Following a hybrid TLS rollout, an organisation sees intermittent h
 
 > **TODO:** This section is carried over from the source document and is not part of `_template.md`. Confirm whether to keep it in the final entry format, and verify each standard/citation.
 
-NIST FIPS 203, FIPS 204. RFC 9954 standardises the TLS 1.3 hybrid key exchange construction; `draft-ietf-tls-ecdhe-mlkem` defines the ECDHE-MLKEM groups and is awaiting RFC publication. NCSC guidance treats hybrid as interim. EU Coordinated Implementation Roadmap end-2030 standalone-classical prohibition for high-risk cases. NIS2 Article 21(2)(h) state-of-the-art cryptography obligation, which supervisors increasingly read as requiring correctly-constructed hybrid during transition. DORA Article 9 confidentiality and integrity obligations apply to financial entities deploying hybrid TLS in production. IETF PQUIP working group migration documents; IETF LAMPS work on Composite ML-DSA for hybrid signatures.
+NIST FIPS 203, FIPS 204. RFC 9954 standardises the TLS 1.3 hybrid key exchange construction; RFC 10024 defines the ECDHE-MLKEM groups (Standards Track, August 2026). NCSC guidance treats hybrid as interim. EU Coordinated Implementation Roadmap end-2030 standalone-classical prohibition for high-risk cases. NIS2 Article 21(2)(h) state-of-the-art cryptography obligation, which supervisors increasingly read as requiring correctly-constructed hybrid during transition. DORA Article 9 confidentiality and integrity obligations apply to financial entities deploying hybrid TLS in production. IETF PQUIP working group migration documents; IETF LAMPS work on Composite ML-DSA for hybrid signatures.
