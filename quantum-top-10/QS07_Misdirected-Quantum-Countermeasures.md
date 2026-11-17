@@ -1,4 +1,4 @@
-## Proposal: Misdirected Quantum Countermeasures
+## QS07:2026 - Misdirected Quantum Countermeasures
 
 **Evidence:** Demonstrated for the underlying guidance - the UK NCSC and the US NSA
 have both published explicit positions against substituting QKD for post-quantum
@@ -95,7 +95,7 @@ deadline approaching.
 
 **Reference Links:**
 
-<!-- References verified 2026-07-27 against authoritative primary sources. nsa.gov returns 403 to automated requests but resolves normally in a browser; this affects existing NSA citations in QS03 and QS07 equally. -->
+<!-- References verified 2026-07-27 against authoritative primary sources. nsa.gov returns 403 to automated requests but resolves normally in a browser; this affects existing NSA citations in QS02 and QS06 equally. -->
 
 1. [UK NCSC - Quantum security technologies (white paper)](https://www.ncsc.gov.uk/whitepaper/quantum-security-technologies): States that NCSC will not support QKD for government or military applications, that QKD does not provide authentication, and that PQC is the best mitigation.
 2. [NSA - Quantum Key Distribution (QKD) and Quantum Cryptography (QC)](https://www.nsa.gov/Cybersecurity/Quantum-Key-Distribution-QKD-and-Quantum-Cryptography-QC/): States that NSA does not support QKD or QC for National Security Systems and does not anticipate certifying such products, with the technical limitations enumerated.

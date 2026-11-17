@@ -1,6 +1,6 @@
-## QSxx:2026 - Unverifiable Quantum Execution and Result Assurance
+## QS10:2026 - Unverifiable Quantum Execution and Result Assurance
 
-> **Proposal status:** New entry submitted during Pre-Sprint 0. Number deliberately left as QSxx - placement and numbering are for Sprint 1 voting to decide. Surface: Platform (quantum platforms and hybrid quantum-classical systems). Maturity: Demonstrated under the project's proof-of-concept convention - adversarial tampering by less-trusted providers is modelled and experimentally evaluated in peer-reviewed work, and a runtime detection heuristic is proposed. No public vendor incident is claimed.
+> **Proposal status:** New entry submitted during Pre-Sprint 0. Numbered QS10 by the Sprint 1 vote. Surface: Platform (quantum platforms and hybrid quantum-classical systems). Maturity: Demonstrated under the project's proof-of-concept convention - adversarial tampering by less-trusted providers is modelled and experimentally evaluated in peer-reviewed work, and a runtime detection heuristic is proposed. No public vendor incident is claimed.
 
 **Description:**
 
@@ -8,7 +8,7 @@ A quantum job submitted to a cloud QPU returns a distribution of measurement out
 
 The difficulty is sharpest for the workloads with the strongest commercial case for quantum - optimisation, simulation, materials, finance. Some of these admit a cheap classical check of a returned solution; others may not admit economically practical independent validation at the relevant scale. Where no practical check exists, the tenant may lack evidence sufficient to assess what executed or whether the returned result was manipulated.
 
-**Scope.** None of the current platform entries centres assurance of the underlying execution and returned result when the tenant-side toolchain and co-tenant isolation boundaries are otherwise intact. QS08 addresses harm arising from co-tenants, including fidelity degradation; QS09 addresses compromise of toolchain components; QS10 addresses confidentiality leakage through the control plane. Controls for integrity-verifiable linkage across the submission-to-dispatch-to-result lineage establish traceability within an applicable trust boundary; this entry addresses what evidence permits independent appraisal of the underlying execution and the returned result.
+**Scope.** None of the current platform entries centres assurance of the underlying execution and returned result when the tenant-side toolchain and co-tenant isolation boundaries are otherwise intact. QS09 addresses harm arising from co-tenants, including fidelity degradation, and confidentiality leakage through the control plane; QS08 addresses compromise of toolchain components.<!-- Renumbered to the post-vote scheme. The two surfaces previously cited as QS08 and QS10 are now one entry, QS09; toolchain compromise moved from QS09 to QS08. No clause was dropped. --> Controls for integrity-verifiable linkage across the submission-to-dispatch-to-result lineage establish traceability within an applicable trust boundary; this entry addresses what evidence permits independent appraisal of the underlying execution and the returned result.
 
 **Common Examples of Vulnerability:**
 
