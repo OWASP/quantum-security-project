@@ -1,4 +1,4 @@
-## QS07:2026 - Hardware Roots of Trust
+## QS06:2026 - Hardware Roots of Trust
 
 **Description:**
 

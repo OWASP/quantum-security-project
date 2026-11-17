@@ -1,4 +1,4 @@
-## QS03:2026 - Vulnerable Signatures and Code-Signing
+## QS02:2026 - Vulnerable Signatures and Code-Signing
 
 **Description:**
 

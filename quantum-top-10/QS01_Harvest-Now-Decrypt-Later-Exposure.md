@@ -30,7 +30,7 @@ Scenario #2: A regulated entity retains personal records for a statutory 30-year
 
 **Reference Links:**
 
-<!-- This entry merges the former QS01 (Harvest-Now-Decrypt-Later Exposure) and QS02 (Long-Lived Sensitive Data), consolidating the in-transit and at-rest confidentiality surfaces under Mosca's inequality as a single prioritisation frame, per the discussion in #11. QS02's integrity content (long-lived signed artefacts, identity and credential records) moves to QS03, which already covers signature trust. References verified 2026-08-05 against authoritative canonical sources. -->
+<!-- This entry merges the former QS01 (Harvest-Now-Decrypt-Later Exposure) and QS02 (Long-Lived Sensitive Data), consolidating the in-transit and at-rest confidentiality surfaces under Mosca's inequality as a single prioritisation frame, per the discussion in #11. QS02's integrity content (long-lived signed artefacts, identity and credential records) moves to the signature entry, now QS02, which already covers signature trust. References verified 2026-08-05 against authoritative canonical sources. -->
 
 1. [NIST FIPS 203 (ML-KEM)](https://csrc.nist.gov/pubs/fips/203/final): Key-establishment standard for post-quantum migration.
 2. [NIST IR 8547 (Draft) - Transition to Post-Quantum Cryptography Standards](https://csrc.nist.gov/pubs/ir/8547/ipd): Transition planning guidance referencing Mosca's inequality.
