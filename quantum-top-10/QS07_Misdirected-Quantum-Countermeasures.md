@@ -1,4 +1,4 @@
-## Proposal: Misdirected Quantum Countermeasures
+## QS07:2026 - Misdirected Quantum Countermeasures
 
 **Evidence:** Demonstrated for the underlying guidance - the UK NCSC and the US NSA
 have both published explicit positions against substituting QKD for post-quantum

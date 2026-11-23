@@ -1,6 +1,4 @@
-## QSxx:2026 - Unverifiable Quantum Execution and Result Assurance
-
-> **Proposal status:** New entry submitted during Pre-Sprint 0. Number deliberately left as QSxx - placement and numbering are for Sprint 1 voting to decide. Surface: Platform (quantum platforms and hybrid quantum-classical systems). Maturity: Demonstrated under the project's proof-of-concept convention - adversarial tampering by less-trusted providers is modelled and experimentally evaluated in peer-reviewed work, and a runtime detection heuristic is proposed. No public vendor incident is claimed.
+## QS10:2026 - Unverifiable Quantum Execution and Result Assurance
 
 **Description:**
 

@@ -1,4 +1,4 @@
-## QS06:2026 - Insecure Migration and Hybrid Misuse
+## QS03:2026 - Insecure Migration and Hybrid Misuse
 
 **Description:**
 
