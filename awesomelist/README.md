@@ -21,7 +21,7 @@ Tools and resources that assist with the creation of cryptographic inventories, 
 
 - [open-crypto-rules](https://github.com/scanoss/open-crypto-rules) - Open source Semgrep/OpenGrep rules for detecting cryptographic usage in source code (currently C, Go & Rust).
 - [pq-audit](http://github.com/mk-scorpiosec/pq-audit) - A tool that evaluates cryptographic posture, infrastructure configuration, and code against NIST PQC standards.
-
+- [qrp-mcp](https://github.com/StanimirTenev/qrp-mcp) - Open source (Apache-2.0) scanner for source code and configuration that exports a CycloneDX CBOM and names every file it did not read, with the reason. It does not read binaries.
 
 ## PQC Implementations
  
