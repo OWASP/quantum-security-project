@@ -1,4 +1,4 @@
-## QS05:2026 - Crypto-Agility Failures
+## QS05:2026 - Software Crypto-Agility Failures
 
 **Description:**
 

@@ -1,4 +1,4 @@
-## QS04:2026 - Absent Cryptographic Inventory and CBOM
+## QS04:2026 - Incomplete Cryptographic Discovery and Inventory
 
 **Description:**
 
