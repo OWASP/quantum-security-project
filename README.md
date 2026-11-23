@@ -15,9 +15,7 @@ An official OWASP community project mapping the security risks of the quantum
 era in a practical, vendor-neutral, and risk-based way - the antidote to hype
 and fear.
 
-> **Status:** Bootstrap phase. The OWASP Top 10 for Quantum Security Risks is at
-> draft **v0.1** and open for community input. It is our starting point, not the
-> finished list.
+> **Status:** Entry development. The OWASP Top 10 for Quantum Security Risks is in draft and open for community input, with leads assigned for each entry.
 
 ---
 
@@ -64,38 +62,29 @@ ways of working.
 
 ## The OWASP Top 10 for Quantum Security Risks
 
-Draft v0.1. Each entry lives under [`quantum-top-10/`](quantum-top-10/).
+Draft v0.3 - use branch `2026-draft03`.
 
-The route from the v0.1 draft to a community-validated v1 is laid out in the
-[sprint plan and project timeline](plans/sprint-plan-quantum-top10-2026.md).
+Each entry lives under [`quantum-top-10/`](quantum-top-10/).
 
-QS01-QS07 address the **migration surface** - risks to organisations whose
-existing classical cryptography must be replaced with post-quantum equivalents.
-QS08-QS10 address the **platform surface** - risks to organisations running
-workloads on quantum computing platforms.
+The route from the draft to a community-validated v1 is laid out in the [sprint plan and project timeline](plans/sprint-plan-quantum-top10-2026.md).
 
-> **Candidate restructuring under Sprint 1 discussion (see #11):** QS01 and
-> QS02 have merged into a single Harvest-Now-Decrypt-Later entry covering both
-> in-transit and at-rest confidentiality exposure under Mosca's inequality;
-> QS02's signature and credential-lifetime content moved into QS03. This frees
-> a slot pending the Sprint 1 candidate list - not a claim that any specific
-> replacement is already decided.
+QS01-QS07 address the **migration surface** - risks to organisations whose existing classical cryptography must be replaced with post-quantum equivalents. QS08-QS10 address the **platform surface** - risks to organisations running workloads on quantum computing platforms.
 
-| ID | Risk | Primary anchor |
-|----|------|----------------|
-| [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | Mosca's inequality; EU Roadmap end-2030; NCSC 2031; NSM-10 |
-| [QS03](quantum-top-10/QS03_Vulnerable-Signatures-and-Code-Signing.md) | Vulnerable Signatures and Code-Signing | NSA CNSA 2.0 by 2030; CRA Annex I |
-| [QS04](quantum-top-10/QS04_Absent-Cryptographic-Inventory-and-CBOM.md) | Absent Cryptographic Inventory and CBOM | NCSC 2028; EU Roadmap end-2026 |
-| [QS05](quantum-top-10/QS05_Crypto-Agility-Failures.md) | Crypto-Agility Failures | NIS2 Article 21(2)(h); IETF PQUIP/TLS WG |
-| [QS06](quantum-top-10/QS06_Insecure-Migration-and-Hybrid-Misuse.md) | Insecure Migration and Hybrid Misuse | EU Roadmap end-2030 standalone-classical prohibition |
-| [QS07](quantum-top-10/QS07_Hardware-Roots-of-Trust.md) | Hardware Roots of Trust | NCSC 2028 milestone; CRA Annex IV |
-| [QS08](quantum-top-10/QS08_QPU-Tenant-Isolation-Failures.md) | QPU Tenant Isolation Failures | Choudhury et al. NDSS 2025; Xu et al. CCS 2023 |
-| [QS09](quantum-top-10/QS09_Toolchain-and-Compiler-Compromise.md) | Toolchain and Compiler Compromise | Suresh et al. HASP 2021; Chu et al. ICASSP 2023 |
-| [QS10](quantum-top-10/QS10_Side-Channel-and-Control-Plane-Exposure.md) | Side-Channel and Control-Plane Exposure | Xu et al. CCS 2023 |
+| ID | Name | Entry Leads | Key Risk Area |
+|----|------|-------------| ------------- | 
+| [QS01](quantum-top-10/QS01_Harvest-Now-Decrypt-Later-Exposure.md) | Harvest-Now-Decrypt-Later Exposure | [Scott Kennedy](https://github.com/usinfosec), [Andrea Fukushima](https://github.com/38rea)  | A CRQC could decrypt sensitive data. Data is at risk of being stolen now in advance of a CRQC being created. |
+| [QS02](quantum-top-10/QS02_Vulnerable-Signatures-and-Code-Signing.md) | Vulnerable Signatures and Code-Signing | [Aysha Nahan](https://github.com/ZCodeBrew) | A CRQC could fabricate signatures for transactions/code. |
+| [QS03](quantum-top-10/QS03_Insecure-Migration-and-Hybrid-Misuse.md) |Insecure Migration and Hybrid Misuse | [Michael Howard](https://github.com/x509cert), [Aysha Nahan](https://github.com/ZCodeBrew), [Andy Smith](https://github.com/rot169) | Bad PQC designs & implementations could create new attack vectors, undermining the security supposedly provided by cryptography. |
+| [QS04](quantum-top-10/QS04_Incomplete-Cryptographic-Discovery-and-Inventory.md) | Incomplete Cryptographic Discovery and Inventory | [Ronald Robertson](https://github.com/Treyrob3), [Anjali Gugle](https://github.com/aige-git), [Michael Howard](https://github.com/x509cert) | The absence of a crypto inventory makes migration difficult, and some cryptoassets may be forgotten about. |
+| [QS05](quantum-top-10/QS05_Software-Crypto-Agility-Failures.md) | Software Crypto-Agility Failures | [Michael Howard](https://github.com/x509cert), [Anjali Gugle](https://github.com/aige-git), [Goutama Bachtiar](https://github.com/goubach) | Some aspects of crypto software are difficult to change, making them more difficult to migtrate. |
+| [QS06](quantum-top-10/QS06_Hardware-Crypto-Agility-Failures.md) | Hardware Crypto-Agility Failures | [Mayur Agnihotri](https://github.com/Mayur021) | Some hardware assets are difficult to change, making them more difficult to migtrate. |
+| [QS07](quantum-top-10/QS07_Misdirected-Quantum-Countermeasures.md) | Misdirected Quantum Countermeasures | [Rhea Anthony](https://github.com/RayAnn1606) | Some vendors sell products claiming to help with PQC, but may not be approprite for all situations, giving a false sense of security or wasting efforts. |
+| [QS08](quantum-top-10/QS08_Quantum-Software-Supply-Chain-and-Toolchain-Compromise.md) | Quantum Software Supply Chain and Toolchain Compromise | [Rhea Anthony](https://github.com/RayAnn1606), [Aamiruddin Syed](https://github.com/syedDS) | Tools  & services used to create quantum programs could be compromised/backdoored. |
+| [QS09](quantum-top-10/QS09_Quantum-Platform-Isolation-and-Control-Plane-Exposure.md) | Quantum Platform Isolation and Control Plane Exposure | [Mayur Agnihotri](https://github.com/Mayur021) | Shared quantum computers may not provide sufficient segregation between customers code/executions. |
+| [QS10](quantum-top-10\QS10_Unverifiable-Quantum-Execution-and-Result-Assurance.md) | Unverifiable Quantum Execution and Result Assurance | [Mayur Agnihotri](https://github.com/Mayur021), [Anjali Gugle](https://github.com/aige-git) | Results provided by a QC might be tampered with. |
 
-Each entry follows a common [template](quantum-top-10/_template.md): description,
-common examples, prevention, example attack scenarios, references, and a
-standards-and-regulatory mapping.
+
+Each entry follows a common [template](quantum-top-10/_template.md): description, common examples, prevention, example attack scenarios, references, and a standards-and-regulatory mapping.
 
 ---
 
